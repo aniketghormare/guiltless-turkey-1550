@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import './App.css';
 import Header from './Components/Header';
+
 import { MiddlePart } from './Components/MiddlePart';
 import { Collective } from './Components/Collective';
 
@@ -14,6 +15,7 @@ function App() {
     </DIV>
     <Collective/>
     </>
+
   );
 }
 
