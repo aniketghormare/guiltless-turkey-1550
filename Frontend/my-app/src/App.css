@@ -2,10 +2,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: aqua;
 }
 
 body {
+  background-image: url(../src/Images/posters.png);
+  position: relative;
   width: 100vw;
   height: 100vw;
-  background-color: #1A202C;
+  background-color: #f5f6f9;
+  font-family: Arial, Helvetica, sans-serif;
 }
