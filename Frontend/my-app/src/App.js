@@ -1,14 +1,25 @@
+import styled from 'styled-components';
 import './App.css';
 import Header from './Components/Header';
-import Games from './Pages/Games';
-import Movies from './Pages/Movies';
+
+import { MiddlePart } from './Components/MiddlePart';
+import { Collective } from './Components/Collective';
 
 function App() {
   return (
-    <div className="App">
-     
-    </div>
+    <>
+    <DIV className="App">
+      <Header/>
+      <MiddlePart/>
+      
+    </DIV>
+    <Collective/>
+    </>
+
   );
 }
 
 export default App;
+const DIV= styled.div`
+text-align: center;
+`
