@@ -21,7 +21,7 @@ Link of our deployed project:  []()
 - React.Js
 - Redux
 - Chakra Ui
-- Json-Server
+- MongoDB-Server
 
 
 
