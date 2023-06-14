@@ -26,7 +26,7 @@ Link of our deployed project:  []()
 
 
 ## Pages and features
-- Home Page:- Navigation Bar, Footer.
+- Home Page:- Navigation Bar, Footer,Login,Signup.
 - Admin Page :- Admin dashboard.
 - Account Page:- User authentication using backend(mongoDB) server.
 - Product Page:- It has sorting & filtering functionality , search functionality.
