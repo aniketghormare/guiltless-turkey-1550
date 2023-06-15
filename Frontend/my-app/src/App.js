@@ -10,7 +10,6 @@ function App() {
     <DIV className="App">
       <Header/>
       <MiddlePart/>
-      
     </DIV>
     <Collective/>
     </>
