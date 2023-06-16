@@ -8,8 +8,8 @@ function App() {
 
     <DIV className="App">
 
-      <Header/>
-      <MiddlePart/>
+      <Games/>
+      <Movies/>
 
     </DIV>
 
