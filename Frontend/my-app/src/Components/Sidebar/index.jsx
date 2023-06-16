@@ -30,7 +30,7 @@ const Sidebar = ({ active }) => {
       <Content>
         <SidebarItem Icon={FaGamepad} Text="Games" />
         <SidebarItem Icon={FaFilm} Text="Movies" />
-        <SidebarItem Icon={FaRegFileAlt} Text="PlayStation 5" />
+        {/* <SidebarItem Icon={FaRegFileAlt} Text="PlayStation 5" /> */}
         <SidebarItem Icon={FaRegFileAlt} Text="PlayStation 4" />
         <SidebarItem Icon={FaTv} Text="4K UHD" />
         <SidebarItem Icon={FaGamepad} Text="Xbox Series X" />

@@ -7,7 +7,10 @@ function App() {
   return (
 
     <DIV className="App">
-     
+
+      <Header/>
+      <MiddlePart/>
+
     </DIV>
 
 
