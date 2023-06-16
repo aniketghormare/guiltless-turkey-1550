@@ -1,5 +1,12 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
+
+import Games from './Games'
+import Cart from './Cart'
+
+import Simple from './Singlepage'
+
+
 import {Games} from './Games';
 import {Movies} from './Movies'
 
@@ -10,3 +17,4 @@ export const MainRoutes = () => {
     <Route path='/movies' element={<Movies/>}/>
   </Routes>
 }
+

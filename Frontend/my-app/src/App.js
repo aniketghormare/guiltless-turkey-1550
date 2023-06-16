@@ -3,15 +3,22 @@ import './App.css';
 
 import Games from "./Pages/Games"
 import Movies from './Pages/Movies';
+import Navbar from './Components/Navbar';
+import Cart from './Pages/Cart';
+import MainRoutes from './Pages/MainRoutes';
 function App() {
   return (
 
-    <DIV className="App">
 
-      <Games/>
-      <Movies/>
+    <div className="App">
+      <Navbar/>
+      <MainRoutes/>
+     {/* <Games/> */}
+     {/* <Cart/> */}
+    </div>
 
-    </DIV>
+   
+
 
 
 
@@ -19,6 +26,6 @@ function App() {
 }
 
 export default App;
-const DIV= styled.div`
-text-align: center;
-`
+// const DIV= styled.div`
+// text-align: center;
+// `
