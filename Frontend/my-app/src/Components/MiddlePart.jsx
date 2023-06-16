@@ -7,7 +7,7 @@ export const MiddlePart = () => {
         <h1>Rent Thousands of Games & Movies</h1>
         <h2>NO LATE FEES. CANCEL ANYTIME.</h2>
         <div>
-            <button>Start Free Trial</button>
+           <button >Start Free Trial</button>
         </div>
     </DIV>
   )
@@ -40,5 +40,6 @@ const DIV = styled.div`
         color: #FFFFFF;
         border: none;
         border-radius: 5px;
+        cursor: pointer;
     }
 `
