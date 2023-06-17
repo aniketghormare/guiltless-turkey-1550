@@ -14,16 +14,15 @@ export const Container = styled.div`
     color: white;
     width: 30px;
     height: 30px;
-    margin-top: 32px;
-    margin-left: 20px;
+    margin-top: 25px;
     cursor: pointer;
   }
 
   > img {
         width: 200px;
         height: 55px;
-        /* margin-left: 10px; */
-        margin-top: 17px;
+        margin-right: 52px;
+        margin-top: 13px;
     }
 
      button {
