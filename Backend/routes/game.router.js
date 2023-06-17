@@ -14,7 +14,7 @@ gameRouter.post("/add",async(req,res)=>{
         await game.save()
         res.status(200).json({msg:"Game has been added", game:req.body})
     }catch(err){
-        res.status(400).json({err:err.message})
+        res.status(400).json({err:err})
     }
 })
 gameRouter.get("/",async(req,res)=>{
@@ -23,7 +23,7 @@ gameRouter.get("/",async(req,res)=>{
         res.status(200).json({game})
         
     } catch (error) {
-        res.status(400).json({err:err.message})
+        res.status(400).json({err:error})
     }
     
 })
@@ -43,7 +43,7 @@ gameRouter.patch("/update/:gameID",async(req,res)=>{
         }
         
     } catch (error) {
-        res.status(400).json({error:error.message})
+        res.status(400).json({error:error})
     }
     
     
@@ -63,7 +63,7 @@ gameRouter.delete("/delete/:gameID",async(req,res)=>{
         }
         
     } catch (error) {
-        res.status(400).json({error:error.message})
+        res.status(400).json({error:error})
     }
 })
 
@@ -75,7 +75,7 @@ gameRouter.get("/page/:pagenum",async(req,res)=>{
         const game=await GameModel.find({}).skip((pagenum-1)*Page_Size).limit(Page_Size)
         res.status(200).json({game})
     } catch (error) {
-        res.status(400).json({error:error.message})
+        res.status(400).json({error:error})
     }
 })
 

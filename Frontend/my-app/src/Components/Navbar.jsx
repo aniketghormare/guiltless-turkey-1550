@@ -8,6 +8,9 @@ import Image from '../../src/Images/GAMEZY-removebg-preview.png'
 const Navbar = () => {
   return (
     <DIV>
+
+    
+
       <div style={{display:"flex",borderBottom:"1px solid #d4cfcf"}}>
         <div>
           <img className='logo' src={Image} alt="icons" />
@@ -66,6 +69,7 @@ const Navbar = () => {
       
 
       
+
     </DIV>
   )
 }

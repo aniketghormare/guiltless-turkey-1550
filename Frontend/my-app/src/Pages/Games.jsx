@@ -1,12 +1,17 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import Carousel from 'react-elastic-carousel';
-import data from "../db"
+//import data from "../db"
 import Carousel1 from 'better-react-carousel'
-import {useDispatch, useSelector} from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import { setcart } from '../Redux/ProductReducer/action';
+import { CART_SUCC, GAMES_SUCC } from '../Redux/ProductReducer/actionTypes';
 const Games = () => {
-   
+  const [data, setdata] = useState([])
+   const dispatch=useDispatch()
+   const gamedata=useSelector((store)=>{
+    return store.ProductReducer.Games
+   })
   const items = [
     { id: 1, title: 'item #1', img: "https://cms2.gameflycdn.com/merchandising/live/Design/default/1920w/5038976.png" },
     { id: 2, title: 'item #2', img: "https://cms2.gameflycdn.com/merchandising/live/Design/default/1920w/5035299.png" },
@@ -15,18 +20,59 @@ const Games = () => {
     { id: 5, title: 'item #5', img: "https://cms2.gameflycdn.com/merchandising/live/Design/default/960w/20386.jpg" }
   ]
 
-  
 
-   let column=4
-
-  
+  const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2NDhkMWVhYzc2Y2I4OTg1MzU2YWNjODkiLCJ1c2VyIjoiQW5pa2V0IiwiaWF0IjoxNjg3MDAzNzMyLCJleHAiOjE2ODc2MDg1MzJ9.6b5pIvD-6qYORF9JQ9zE853_Ubj9pHS7rHksAhiBwFY"
+  let column = 5
+  const getgames = () => {
+    fetch("http://localhost:4500/games", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${token}`
+      }
+    }).then((res) => {
+      return res.json()
+    }).then((data) => {
+      dispatch({type:GAMES_SUCC,payload:data.game})
+      setdata(data.game)
+      console.log(data)
+    }).catch((err) => {
+      console.log(err)
+    })
+  }
+  useEffect(() => {
+    getgames()
+  }, [])
+  const handlecart=(el)=>{
+    
+    console.log(el)
+    fetch("http://localhost:4500/cart/add", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${token}`
+      },
+      body:JSON.stringify(el)
+    }).then((res) => {
+      return res.json()
+    }).then((data) => {
+     // dispatch({type:CART_SUCC})
+      //setdata(data.cart)
+      console.log(data)
+      console.log("added cart")
+    }).catch((err) => {
+      console.log(err)
+    })
+  }
+  console.log(data)
+  console.log(gamedata)
   return (
     <Div>
       <h1>Games</h1>
       <div className='cordiv'>
         <Carousel className='carousel' breakPoints={items} style={{ backgroundColor: "rgb(249,249,249" }}>
           {items.map(item => <div className='initdiccorosal' key={item.id}>
-            <img width="100%" height="100%" src={item.img} />
+            <img width="100%"alt="img"  height="100%" src={item.img} />
           </div>)}
         </Carousel>
       </div>
@@ -38,18 +84,18 @@ const Games = () => {
           <h1>Featured</h1>
         </div>
         <div style={{ height: "90%", width: "100%", border: "1px solid rgb(249,249,249)" }}>
-          <div style={{ display: "flex", height: "100%", width: "100%" }}>
+          <div style={{}}>
             {
-              <Carousel1 cols={column} rows={1} gap={0} loop>
+              <Carousel1 cols={column} rows={1} loop>
                 {
-                  data.map((el, index) => {
+                  gamedata.map((el, index) => {
                     return (
                       <Carousel1.Item style={{ height: "100%", width: "200px" }}>
-                        <img width="80%" height="350px" src={el.avatar} />
-                        {/* <h4>{el.name}</h4> */}
-                        {/* <p>{el.genre}</p> */}
-                        <div style={{ height: "auto", width: "100%", border: "1px solid rgb(249,249,249)", margin: "auto" }}>
-                          <button  style={{ display: "flex", margin: "auto", width: "70%", justifyContent: "space-between", backgroundColor: "rgb(86,118,169", color: "white" }}>
+                        <img width="80%"alt="img"  height="260px" src={el.avatar} />
+                        <h4>{el.name}</h4>
+                        <p>{el.genre}</p>
+                        <div style={{ display: "flex", height: "auto", width: "80%", border: "1px solid rgb(249,249,249)", margin: "auto" }}>
+                          <button onClick={()=>handlecart(el)} style={{ display: "flex", width: "100%", margin: "auto", borderRadius: "5px", justifyContent: "space-between", backgroundColor: "rgb(86,118,169", color: "white" }}>
                             <h4>See More</h4>
                             <h4>${el.price}</h4>
                           </button>
@@ -76,18 +122,18 @@ const Games = () => {
           <h1>Most Popular</h1>
         </div>
         <div style={{ height: "90%", width: "100%", border: "1px solid rgb(249,249,249)" }}>
-          <div style={{ display: "flex", height: "100%", width: "100%" }}>
+          <div style={{}}>
             {
-              <Carousel1 cols={4} rows={1} gap={0} loop>
+              <Carousel1 cols={column} rows={1} loop>
                 {
-                  data.map((el, index) => {
+                  gamedata.map((el, index) => {
                     return (
                       <Carousel1.Item style={{ height: "100%", width: "200px" }}>
-                        <img width="80%" height="250px" src={el.avatar} />
-                        {/* <h4>{el.name}</h4> */}
-                        {/* <p>{el.genre}</p> */}
-                        <div style={{ height: "auto", width: "100%", border: "1px solid rgb(249,249,249)", margin: "auto" }}>
-                          <button style={{ display: "flex", margin: "auto", width: "70%", justifyContent: "space-between", backgroundColor: "rgb(86,118,169", color: "white" }}>
+                        <img width="80%"alt="img"  height="260px" src={el.avatar} />
+                        <h4>{el.name}</h4>
+                        <p>{el.genre}</p>
+                        <div style={{ display: "flex", height: "auto", width: "80%", border: "1px solid rgb(249,249,249)", margin: "auto" }}>
+                          <button style={{ display: "flex", width: "100%", margin: "auto", borderRadius: "5px", justifyContent: "space-between", backgroundColor: "rgb(86,118,169", color: "white" }}>
                             <h4>See More</h4>
                             <h4>${el.price}</h4>
                           </button>
@@ -114,18 +160,18 @@ const Games = () => {
           <h1>New Releases</h1>
         </div>
         <div style={{ height: "90%", width: "100%", border: "1px solid rgb(249,249,249)" }}>
-          <div style={{ display: "flex", height: "100%", width: "100%" }}>
+          <div style={{}}>
             {
-              <Carousel1 cols={4} rows={1} gap={0} loop>
+              <Carousel1 cols={column} rows={1} loop>
                 {
-                  data.map((el, index) => {
+                  gamedata.map((el, index) => {
                     return (
                       <Carousel1.Item style={{ height: "100%", width: "200px" }}>
-                        <img width="80%" height="250px" src={el.avatar} />
-                        {/* <h4>{el.name}</h4> */}
-                        {/* <p>{el.genre}</p> */}
-                        <div style={{ height: "auto", width: "100%", border: "1px solid rgb(249,249,249)", margin: "auto" }}>
-                          <button style={{ display: "flex", margin: "auto", width: "70%", justifyContent: "space-between", backgroundColor: "rgb(86,118,169", color: "white" }}>
+                        <img width="80%"alt="img"  height="260px" src={el.avatar} />
+                        <h4>{el.name}</h4>
+                        <p>{el.genre}</p>
+                        <div style={{ display: "flex", height: "auto", width: "80%", border: "1px solid rgb(249,249,249)", margin: "auto" }}>
+                          <button style={{ display: "flex", width: "100%", margin: "auto", borderRadius: "5px", justifyContent: "space-between", backgroundColor: "rgb(86,118,169", color: "white" }}>
                             <h4>See More</h4>
                             <h4>${el.price}</h4>
                           </button>
@@ -154,18 +200,18 @@ const Games = () => {
 
 
         <div style={{ height: "90%", width: "100%", border: "1px solid rgb(249,249,249)" }}>
-          <div style={{ display: "flex", height: "100%", width: "100%" }}>
+          <div style={{}}>
             {
-              <Carousel1 cols={4} rows={1} gap={0} loop>
+              <Carousel1 cols={column} rows={1} loop>
                 {
-                  data.map((el, index) => {
+                  gamedata.map((el, index) => {
                     return (
                       <Carousel1.Item style={{ height: "100%", width: "200px" }}>
-                        <img width="80%" height="250px" src={el.avatar} />
-                        {/* <h4>{el.name}</h4> */}
-                        {/* <p>{el.genre}</p> */}
-                        <div style={{ height: "20px", width: "100%", border: "1px solid rgb(249,249,249)", margin: "auto" }}>
-                          <button style={{ display: "flex", margin: "auto", width: "70%", justifyContent: "space-between", backgroundColor: "rgb(86,118,169", color: "white" }}>
+                        <img width="80%"alt="img"  height="260px" src={el.avatar} />
+                        <h4>{el.name}</h4>
+                        <p>{el.genre}</p>
+                        <div style={{ display: "flex", height: "auto", width: "80%", border: "1px solid rgb(249,249,249)", margin: "auto" }}>
+                          <button style={{ display: "flex", width: "100%", margin: "auto", borderRadius: "5px", justifyContent: "space-between", backgroundColor: "rgb(86,118,169", color: "white" }}>
                             <h4>See More</h4>
                             <h4>${el.price}</h4>
                           </button>
