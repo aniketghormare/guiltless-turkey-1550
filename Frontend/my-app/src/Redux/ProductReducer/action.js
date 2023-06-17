@@ -1,20 +1,17 @@
-import axios from "axios";
-import { CART_SUCC, GAMES_FAIL, GAMES_REQ, GAMES_SUCC } from "./actionTypes";
 
+import axios from "axios"
+import { GET_FAILURE, GET_PRODUCT_ID_SUCCESS, GET_REQUEST, GET_SUCCESS } from "./actionTypes"
 
-export const getGames =(obj)=> (dispatch) => {
-  // Write logic here
-  // dispatch({type:GAMES_REQ})
-  // axios.get(`mongodb+srv://aniket:ghormare@cluster0.qr4dpak.mongodb.net/?retryWrites=true&w=majority/Construct_week_project/Games`,obj).then((res)=>{
-  //   dispatch({type:GAMES_SUCC,payload:res.data})
-  // }).catch((err)=>{
-  //   dispatch({type:GAMES_FAIL})
-  // })
-};
-
-export const editBook = () => {
-  // Write logic here
-};
-
+export const getProducts=(query)=>(dispatch)=>{
+    dispatch({type:GET_REQUEST})
+    axios.get(`http://localhost:8080/game`,query)
+    .then((res)=>{
+        console.log(res.data)
+        dispatch({type:GET_SUCCESS,payload:res.data})
+    })
+    .catch((err)=>{
+        dispatch({type:GET_FAILURE})
+    })
+}
 
 
