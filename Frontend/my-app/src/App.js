@@ -4,17 +4,23 @@ import Header from './Components/Header';
 import {MiddlePart} from './Components/MiddlePart'
 import {Collective} from './Components/Collective'
 import Navbar from './Components/Navbar';
+import bgImage from './Images/background_image.mp4'
+import Login from './Components/Login';
 
 function App() {
   return (
     <>
-    {/* <DIV className="App">
-
+    <DIV className="App">
+      <video autoPlay loop muted>
+        <source src={bgImage} type='video/mp4'/>
+      </video>
       <Header/>
       <MiddlePart/>
+      <Collective/>
     </DIV>
-    <Collective/> */}
-    <Navbar/>
+    {/* <Collective/> */}
+    {/* <Navbar/> */}
+    {/* <Login/> */}
     </>
   );
 }
