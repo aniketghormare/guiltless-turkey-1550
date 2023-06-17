@@ -8,8 +8,7 @@ const {userRouter}=require("./routes/user.router")
 const { adminRouter } = require("./routes/admin.router")
 const { gameRouter } = require("./routes/game.router")
 const { movieRouter } = require("./routes/movie.router")
-const { adminGameRouter } = require("./routes/adminGames.router")
-const { adminMovieRouter } = require("./routes/adminMovie.router")
+
 require("dotenv").config()
 
 const app=express()
@@ -28,7 +27,7 @@ app.use("/adminmovies", adminMovieRouter)
 
 app.use("/games", gameRouter)
 app.use("/movies", movieRouter)
-
+app.use("/cart",cartRouter)
 
 app.listen(process.env.port,async()=>{
 try {

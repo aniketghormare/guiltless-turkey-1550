@@ -1,0 +1,773 @@
+
+{
+    "game":[
+        {
+            "name":"Call of Duty Modern Warfare",
+            "avatar":"https://th.bing.com/th/id/OIP.am9toDFN1DDwecSgKb6tZQHaLH?pid=ImgDet&w=197&h=295&c=7&dpr=1.5",
+            "genre":"Action Adventure",
+            "price":25,
+            "category":"shooting",
+            "type":"most popular",
+            "id":1
+
+        },
+        {
+            "name":"Sniper3",
+            "avatar":"https://th.bing.com/th/id/OIP.YWRq3bUojas8krMK6PfFAgHaLH?pid=ImgDet&w=197&h=295&c=7&dpr=1.5",
+            "genre":"Action Adventure",
+            "price":25,
+            "category":"shooting",
+            "type":"most popular",
+            "id":2
+
+        },
+        {
+            "name":"Star Wars Jedi: Survivor",
+            "avatar":"https://cms.gameflycdn.com/proxy/gf/boxart/320w/5038971.jpg",
+            "genre":"Action Adventure",
+            "price":25,
+            "category":"shooting",
+            "type":"most popular",
+            "id":3
+
+        },
+        {
+            "name":"Dhoom",
+            "avatar":"https://th.bing.com/th/id/OIP.bGf-gHbLv5dxCjjIAjtpzQAAAA?pid=ImgDet&w=187&h=333&c=7&dpr=1.5",
+            "genre":"Action Adventure",
+            "price":25,
+            "category":"war",
+            "type":"most popular",
+            "id":4
+        },
+        {
+            "name":"Mandalorian",
+            "avatar":"https://th.bing.com/th/id/OIP.Z8sYP-uwovx46CjiEhYlMgHaLH?pid=ImgDet&w=197&h=295&c=7&dpr=1.5",
+            "genre":"Action Adventure",
+            "price":25,
+            "category":"war",
+            "type":"most popular",
+            "id":5
+        },
+        {
+            "name":"Scars Above",
+            "avatar":"https://cms.gameflycdn.com/proxy/gf/boxart/320w/5037629.jpg",
+            "genre":"Action Adventure",
+            "price":35,
+            "category":"war",
+            "type":"most popular",
+            "id":6
+        },
+        {
+            "name":"Anno 1800",
+            "avatar":"https://cms.gameflycdn.com/proxy/gf/boxart/320w/5039149.jpg",
+            "price":35,
+            "category":"war",
+            "type":"most popular",
+            "id":7
+        },
+        {
+            "name":"Assanssin's Creed Mirage",
+            "avatar":"https://cms.gameflycdn.com/proxy/gf/boxart/320w/5040242.jpg",
+            "price":35,
+            "category":"war",
+            "type":"most popular",
+            "id":8
+        },
+        {
+            "name":"Diablo IV",
+            "avatar":"https://cms.gameflycdn.com/proxy/gf/boxart/320w/5038976.jpg",
+            "genre":"Action Adventure",
+            "price":35,
+            "category":"war",
+            "type":"most popular",
+            "id":9
+        },
+        {
+            "name":"Metroid Prime",
+            "avatar":"https://cms.gameflycdn.com/proxy/gf/boxart/320w/5039192.jpg",
+            "genre":"Action Adventure",
+            "price":35,
+            "category":"war",
+            "type":"most popular",
+            "id":10
+        },
+        {
+            "name":"Power Wash Simulator",
+            "avatar":"https://cms.gameflycdn.com/proxy/gf/boxart/320w/5039923.jpg",
+            "genre":"Strategi/Sim",
+            "price":35,
+            "category":"war",
+            "type":"most popular",
+            "id":11
+        },
+        {
+            "name":"Zinggurat",
+            "avatar":"https://cms.gameflycdn.com/proxy/gf/boxart/320w/5039409.jpg",
+            "genre":"Shooter",
+            "price":35,
+            "category":"shooting",
+            "type":"Best of 2022",
+            "id":12
+        },
+        {
+            "name":"Street Fighter",
+            "avatar":"https://cms.gameflycdn.com/proxy/gf/boxart/320w/5038968.jpg",
+            "genre":"War",
+            "price":35,
+            "category":"war",
+            "type":"Best of 2022",
+            "id":13
+        },
+        {
+            "name":"Zelda",
+            "avatar":"https://cms.gameflycdn.com/proxy/gf/boxart/320w/5021895.jpg",
+            "genre":"Action Adventure",
+            "price":35,
+            "category":"war",
+            "type":"Best of 2022",
+            "id":14
+        },
+        {
+            "name":"Dead Space",
+            "avatar":"https://cms.gameflycdn.com/proxy/gf/boxart/320w/5038100.jpg",
+            "genre":"Action Adventure",
+            "price":35,
+            "category":"war",
+            "type":"Best of 2022",
+            "id":15
+        },
+        {
+            "name":"Persona 5 Royal",
+            "avatar":"https://cms.gameflycdn.com/proxy/gf/boxart/320w/5037382.jpg",
+            "genre":"Action Adventure",
+            "price":35,
+            "category":"war",
+            "type":"Best of 2022",
+            "id":16
+        },
+        {
+            "name":"Grand Theft Auto V",
+            "avatar":"https://cms.gameflycdn.com/proxy/gf/boxart/320w/5008465.jpg",
+            "genre":"Action Adventure",
+            "price":35,
+            "category":"war",
+            "type":"Best of 2022",
+            "id":17
+        },
+        {
+            "name":"Battlefield 1",
+            "avatar":"https://cms.gameflycdn.com/proxy/gf/boxart/320w/5011350.jpg",
+            "genre":"Strategi/Sim",
+            "price":35,
+            "category":"war",
+            "type":"Best of 2022",
+            "id":18
+        },
+        {
+            "name":"Call of Duty Modern Warfare II",
+            "avatar":"https://cms.gameflycdn.com/proxy/gf/boxart/320w/5036319.jpg",
+            "genre":"Strategi/Sim",
+            "price":25,
+            "category":"war",
+            "type":"Best of 2022",
+            "id":19
+        },
+        {
+            "name":"Dishonored 2 ",
+            "avatar":"https://cms.gameflycdn.com/proxy/gf/boxart/320w/5009553.jpg",
+            "genre":"Strategi/Sim",
+            "price":35,
+            "category":"shooting",
+            "type":"Best of 2022",
+            "id":20
+        },
+        {
+            "name":"Gal guardians",
+            "avatar":"https://cms.gameflycdn.com/proxy/gf/boxart/320w/5039382.jpg",
+            "genre":"Action Adventure",
+            "price":35,
+            "category":"war",
+            "type":"New Release",
+            "id":21
+        },
+        {
+            "name":"Park Beyond",
+            "avatar":"https://cms.gameflycdn.com/proxy/gf/boxart/320w/5039763.jpg",
+            "genre":"Strategi/Sim",
+            "price":35,
+            "category":"war",
+            "type":"New Release",
+            "id":22
+        },
+        {
+            "name":"Forspoken",
+            "avatar":"https://cms.gameflycdn.com/proxy/gf/boxart/320w/5032788.jpg",
+            "genre":"Strategi/Sim",
+            "price":55,
+            "category":"war",
+            "type":"New Release",
+            "id":23
+        },
+        {
+            "name":"Project Car 3",
+            "avatar":"https://cms.gameflycdn.com/proxy/gf/boxart/320w/5024583.jpg",
+            "genre":"jugaar",
+            "price":35,
+            "category":"race",
+            "type":"New Release",
+            "id":24
+        },
+        {
+            "name":"Elden Ring",
+            "avatar":"https://cms.gameflycdn.com/proxy/gf/boxart/320w/5029902.jpg",
+            "genre":"Action Adventure",
+            "price":35,
+            "category":"war",
+            "type":"New Release",
+            "id":25
+        },
+        {
+            "name":"Divinity",
+            "avatar":"https://cms.gameflycdn.com/proxy/gf/boxart/320w/5016859.jpg",
+            "genre":"Strategi/Sim",
+            "price":35,
+            "category":"war",
+            "type":"New Release",
+            "id":26
+        },
+        {
+            "name":"Deathloop",
+            "avatar":"https://cms.gameflycdn.com/proxy/gf/boxart/320w/5026492.jpg",
+            "genre":"Strategi/Sim",
+            "price":35,
+            "category":"shooting",
+            "type":"New Release",
+            "id":27
+        },
+        {
+            "name":"Dead Island",
+            "avatar":"https://cms.gameflycdn.com/proxy/gf/boxart/320w/5037264.jpg",
+            "genre":"Action Adventure",
+            "price":35,
+            "category":"war",
+            "type":"most popular",
+            "id":28
+        },
+        {
+            "name":"Titanfall 2",
+            "avatar":"https://cms.gameflycdn.com/proxy/gf/boxart/320w/5011443.jpg",
+            "genre":"Action Adventure",
+            "price":35,
+            "category":"war",
+            "type":"most popular",
+            "id":29
+        },
+        {
+            "name":"Dead Space",
+            "avatar":"https://cms.gameflycdn.com/proxy/gf/boxart/320w/5038099.jpg",
+            "genre":"Action Adventure",
+            "price":35,
+            "category":"war",
+            "type":"most popular",
+            "id":30
+        },
+        {
+            "name":"Dragon",
+            "avatar":"https://cms.gameflycdn.com/proxy/gf/boxart/320w/5025330.jpg",
+            "genre":"Action Adventure",
+            "price":35,
+            "category":"war",
+            "type":"most popular",
+            "id":31
+        },
+        {
+            "name":"Final Fantasy",
+            "avatar":"https://cms.gameflycdn.com/proxy/gf/boxart/320w/5038973.jpg",
+            "genre":"Action Adventure",
+            "price":35,
+            "category":"war",
+            "type":"most popular",
+            "id":32
+        },
+        {
+            "name":"Mortal Kombat",
+            "avatar":"https://cms.gameflycdn.com/proxy/gf/boxart/320w/5040212.jpg",
+            "genre":"Action Adventure",
+            "price":35,
+            "category":"war",
+            "type":"most popular",
+            "id":33
+        },
+        {
+            "name":"Battleground",
+            "avatar":"https://cms.gameflycdn.com/proxy/gf/boxart/320w/5018207.jpg",
+            "genre":"Action Adventure",
+            "price":35,
+            "category":"war",
+            "type":"most popular",
+            "id":34
+        },
+        {
+            "name":"Far Cry",
+            "avatar":"https://cms.gameflycdn.com/proxy/gf/boxart/320w/5008283.jpg",
+            "genre":"Action Adventure",
+            "price":35,
+            "category":"war",
+            "type":"most popular",
+            "id":35
+        },
+        {
+            "name":"The Last Of US: part I",
+            "avatar":"https://cms.gameflycdn.com/proxy/gf/boxart/320w/5036350.jpg",
+            "genre":"Action Adventure",
+            "price":35,
+            "category":"war",
+            "type":"most popular",
+            "id":36
+        },
+        {
+            "name":"The Last Of US: part II",
+            "avatar":"https://cms.gameflycdn.com/proxy/gf/boxart/320w/5036350.jpg",
+            "genre":"Action Adventure",
+            "price":35,
+            "category":"war",
+            "type":"most popular",
+            "id":37
+        },
+        {
+            "name":"The Last Of US: part III",
+            "avatar":"https://cms.gameflycdn.com/proxy/gf/boxart/320w/5036350.jpg",
+            "genre":"Action Adventure",
+            "price":35,
+            "category":"war",
+            "type":"most popular",
+            "id":38
+        },
+        {
+            "name":"Persona 5 Royal I",
+            "avatar":"https://cms.gameflycdn.com/proxy/gf/boxart/320w/5037382.jpg",
+            "genre":"Action Adventure",
+            "price":35,
+            "category":"war",
+            "type":"most popular",
+            "id":39
+        },
+        {
+            "name":"Persona 5 Royal II",
+            "avatar":"https://cms.gameflycdn.com/proxy/gf/boxart/320w/5037382.jpg",
+            "genre":"Action Adventure",
+            "price":35,
+            "category":"war",
+            "type":"most popular",
+            "id":40
+        }
+    ],
+
+    "movie":[
+            {
+              "id": 1,
+              "Title": "Batman Begins",
+              "Year": "2005",
+              "imdbID": "tt0372784",
+              "Type": "movie",
+              "Poster": "https://m.media-amazon.com/images/M/MV5BOTY4YjI2N2MtYmFlMC00ZjcyLTg3YjEtMDQyM2ZjYzQ5YWFkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"
+            },
+            {
+              "id": 2,
+              "Title": "Batman v Superman: Dawn of Justice",
+              "Year": "2016",
+              "imdbID": "tt2975590",
+              "Type": "movie",
+              "Poster": "https://m.media-amazon.com/images/M/MV5BYThjYzcyYzItNTVjNy00NDk0LTgwMWQtYjMwNmNlNWJhMzMyXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"
+            },
+            {
+              "id": 3,
+              "Title": "The Batman",
+              "Year": "2022",
+              "imdbID": "tt1877830",
+              "Type": "movie",
+              "Poster": "https://m.media-amazon.com/images/M/MV5BMDdmMTBiNTYtMDIzNi00NGVlLWIzMDYtZTk3MTQ3NGQxZGEwXkEyXkFqcGdeQXVyMzMwOTU5MDk@._V1_SX300.jpg"
+            },
+            {
+              "id": 4,
+              "Title": "Batman",
+              "Year": "1989",
+              "imdbID": "tt0096895",
+              "Type": "movie",
+              "Poster": "https://m.media-amazon.com/images/M/MV5BMTYwNjAyODIyMF5BMl5BanBnXkFtZTYwNDMwMDk2._V1_SX300.jpg"
+            },
+            {
+              "id": 5,
+              "Title": "Batman Returns",
+              "Year": "1992",
+              "imdbID": "tt0103776",
+              "Type": "movie",
+              "Poster": "https://m.media-amazon.com/images/M/MV5BOGZmYzVkMmItM2NiOS00MDI3LWI4ZWQtMTg0YWZkODRkMmViXkEyXkFqcGdeQXVyODY0NzcxNw@@._V1_SX300.jpg"
+            },
+            {
+              "id": 6,
+              "Title": "Batman & Robin",
+              "Year": "1997",
+              "imdbID": "tt0118688",
+              "Type": "movie",
+              "Poster": "https://m.media-amazon.com/images/M/MV5BMGQ5YTM1NmMtYmIxYy00N2VmLWJhZTYtN2EwYTY3MWFhOTczXkEyXkFqcGdeQXVyNTA2NTI0MTY@._V1_SX300.jpg"
+            },
+            {
+              "id": 7,
+              "Title": "Batman Forever",
+              "Year": "1995",
+              "imdbID": "tt0112462",
+              "Type": "movie",
+              "Poster": "https://m.media-amazon.com/images/M/MV5BNDdjYmFiYWEtYzBhZS00YTZkLWFlODgtY2I5MDE0NzZmMDljXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg"
+            },
+            {
+              "id": 8,
+              "Title": "The Lego Batman Movie",
+              "Year": "2017",
+              "imdbID": "tt4116284",
+              "Type": "movie",
+              "Poster": "https://m.media-amazon.com/images/M/MV5BMTcyNTEyOTY0M15BMl5BanBnXkFtZTgwOTAyNzU3MDI@._V1_SX300.jpg"
+            },
+            {
+              "id": 9,
+              "Title": "Batman: The Animated Series",
+              "Year": "1992–1995",
+              "imdbID": "tt0103359",
+              "Type": "series",
+              "Poster": "https://m.media-amazon.com/images/M/MV5BOTM3MTRkZjQtYjBkMy00YWE1LTkxOTQtNDQyNGY0YjYzNzAzXkEyXkFqcGdeQXVyOTgwMzk1MTA@._V1_SX300.jpg"
+            },
+            {
+              "id": 10,
+              "Title": "Batman v Superman: Dawn of Justice (Ultimate Edition)",
+              "Year": "2016",
+              "imdbID": "tt18689424",
+              "Type": "movie",
+              "Poster": "https://m.media-amazon.com/images/M/MV5BOTRlNWQwM2ItNjkyZC00MGI3LThkYjktZmE5N2FlMzcyNTIyXkEyXkFqcGdeQXVyMTEyNzgwMDUw._V1_SX300.jpg"
+            },
+            {
+                "id": 11,
+                "Title": "Avatar",
+                "Year": "2009",
+                "imdbID": "tt0499549",
+                "Type": "movie",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BZDA0OGQxNTItMDZkMC00N2UyLTg3MzMtYTJmNjg3Nzk5MzRiXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_SX300.jpg"
+            },
+            {
+                "id": 12,
+                "Title": "Avatar: The Way of Water",
+                "Year": "2022",
+                "imdbID": "tt1630029",
+                "Type": "movie",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BYjhiNjBlODctY2ZiOC00YjVlLWFlNzAtNTVhNzM1YjI1NzMxXkEyXkFqcGdeQXVyMjQxNTE1MDA@._V1_SX300.jpg"
+            },
+            {
+                "id": 13,
+                "Title": "Avatar: The Last Airbender",
+                "Year": "2005–2008",
+                "imdbID": "tt0417299",
+                "Type": "series",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BODc5YTBhMTItMjhkNi00ZTIxLWI0YjAtNTZmOTY0YjRlZGQ0XkEyXkFqcGdeQXVyODUwNjEzMzg@._V1_SX300.jpg"
+            },
+            {
+                "id": 14,
+                "Title": "The King's Avatar",
+                "Year": "2019",
+                "imdbID": "tt10732794",
+                "Type": "series",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BOGMxZDc1N2ItODI3NS00MDIwLWJkYzAtMTgyMDZlN2FlNGYzXkEyXkFqcGdeQXVyMjQ0OTYxOTc@._V1_SX300.jpg"
+            },
+            {
+                "id": 15,
+                "Title": "The King's Avatar",
+                "Year": "2017–",
+                "imdbID": "tt6859260",
+                "Type": "series",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BZjIyMjE5ZDYtMTQxNC00NTEzLTgwYzYtMmM0NDg3OWFlYWM5XkEyXkFqcGdeQXVyNjMxNzQ2NTQ@._V1_SX300.jpg"
+            },
+            
+            {
+                "id": 17,
+                "Title": "The Fast and the Furious",
+                "Year": "2001",
+                "imdbID": "tt0232500",
+                "Type": "movie",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BNzlkNzVjMDMtOTdhZC00MGE1LTkxODctMzFmMjkwZmMxZjFhXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"
+            },
+            {
+                "id": 18,
+                "Title": "Fast Five",
+                "Year": "2011",
+                "imdbID": "tt1596343",
+                "Type": "movie",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BMTUxNTk5MTE0OF5BMl5BanBnXkFtZTcwMjA2NzY3NA@@._V1_SX300.jpg"
+            },
+            {
+                "id": 19,
+                "Title": "Fast & Furious",
+                "Year": "2009",
+                "imdbID": "tt1013752",
+                "Type": "movie",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BYjQ1ZTMxNzgtZDcxOC00NWY5LTk3ZjAtYzRhMDhlNDZlOWEzXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
+            },
+            {
+                "id": 20,
+                "Title": "2 Fast 2 Furious",
+                "Year": "2003",
+                "imdbID": "tt0322259",
+                "Type": "movie",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BMzExYjcyYWMtY2JkOC00NDUwLTg2OTgtMDI3MGY2OWQzMDE2XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"
+            },
+            {
+                "id": 21,
+                "Title": "The Fast and the Furious: Tokyo Drift",
+                "Year": "2006",
+                "imdbID": "tt0463985",
+                "Type": "movie",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BMTQ2NTMxODEyNV5BMl5BanBnXkFtZTcwMDgxMjA0MQ@@._V1_SX300.jpg"
+            },
+            {
+                "id": 22,
+                "Title": "Fast & Furious Presents: Hobbs & Shaw",
+                "Year": "2019",
+                "imdbID": "tt6806448",
+                "Type": "movie",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BOTIzYmUyMmEtMWQzNC00YzExLTk3MzYtZTUzYjMyMmRiYzIwXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_SX300.jpg"
+            },
+            {
+                "Title": "RRR",
+                "Year": "2022",
+                "imdbID": "tt8178634",
+                "Type": "movie",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BODUwNDNjYzctODUxNy00ZTA2LWIyYTEtMDc5Y2E5ZjBmNTMzXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_SX300.jpg",
+                "id":23
+            },
+            {
+                "id": 24,
+                "Title": "The Lion King",
+                "Year": "1994",
+                "imdbID": "tt0110357",
+                "Type": "movie",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BYTYxNGMyZTYtMjE3MS00MzNjLWFjNmYtMDk3N2FmM2JiM2M1XkEyXkFqcGdeQXVyNjY5NDU4NzI@._V1_SX300.jpg"
+            },
+            {
+                "id": 25,
+                "Title": "The Lion King",
+                "Year": "2019",
+                "imdbID": "tt6105098",
+                "Type": "movie",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BMjIwMjE1Nzc4NV5BMl5BanBnXkFtZTgwNDg4OTA1NzM@._V1_SX300.jpg"
+            },
+            {
+                "id": 26,
+                "Title": "The Lion King 2: Simba's Pride",
+                "Year": "1998",
+                "imdbID": "tt0120131",
+                "Type": "movie",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BY2Y3MTk2MDgtOTc1Yy00ZmFjLThlNTEtMDQ1Y2EzZmRjMzVjXkEyXkFqcGdeQXVyNjk1Njg5NTA@._V1_SX300.jpg"
+            },
+            {
+                "id": 27,
+                "Title": "The Lion King 3: Hakuna Matata",
+                "Year": "2004",
+                "imdbID": "tt0318403",
+                "Type": "movie",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BOGZiMDQ1YTQtMGVlOC00OTJiLWFkYzMtYjdiYmY0NWM5YzVjXkEyXkFqcGdeQXVyOTg4MDk3MTQ@._V1_SX300.jpg"
+            },
+            {
+                "id": 28,
+                "Title": "The Lion King",
+                "Year": "1994",
+                "imdbID": "tt0323073",
+                "Type": "game",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BNzVmNzQ2ZmYtMmUzNy00MzhjLTg4ODUtMTQ0MjMzYTdkMDg5XkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg"
+            },
+            {
+                "id": 29,
+                "Title": "Simba: The King Lion",
+                "Year": "1995–",
+                "imdbID": "tt2374051",
+                "Type": "series",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BNjkyOTczZGEtYmJhZC00ODIxLTg2NTQtNzUxNmNhZDgxN2Q1XkEyXkFqcGdeQXVyNjExODE1MDc@._V1_SX300.jpg"
+            },
+            {
+                "id": 30,
+                "Title": "Leo the Lion: King of the Jungle",
+                "Year": "1994",
+                "imdbID": "tt0234092",
+                "Type": "movie",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BOThjNzQ4MjktODE0Mi00NzM2LTljN2QtYjE5YWQ4NGQyOTNkXkEyXkFqcGdeQXVyODIxNjk4NzQ@._V1_SX300.jpg"
+            },
+            {
+                "id": 31,
+                "Title": "Kung Fu Panda",
+                "Year": "2008",
+                "imdbID": "tt0441773",
+                "Type": "movie",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BODJkZTZhMWItMDI3Yy00ZWZlLTk4NjQtOTI1ZjU5NjBjZTVjXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_SX300.jpg"
+            },
+            {
+                "id": 32,
+                "Title": "Kung Fu Panda 2",
+                "Year": "2011",
+                "imdbID": "tt1302011",
+                "Type": "movie",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BYzQ0ZWIxZjAtYWI3Yy00MGM0LWFjOGYtNzcyYThiOTA3ODI1XkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_SX300.jpg"
+            },
+            {
+                "id": 33,
+                "Title": "Kung Fu Panda 3",
+                "Year": "2016",
+                "imdbID": "tt2267968",
+                "Type": "movie",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BMTUyNzgxNjg2M15BMl5BanBnXkFtZTgwMTY1NDI1NjE@._V1_SX300.jpg"
+            },
+            {
+                "id": 34,
+                "Title": "Kung Fu Panda: Secrets of the Furious Five",
+                "Year": "2008",
+                "imdbID": "tt1287845",
+                "Type": "movie",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BMjQwMWNmYWUtY2E5NS00OTlkLWI2Y2MtNzhjZDUyYmZhZDVjXkEyXkFqcGdeQXVyNjc2MjYzMTY@._V1_SX300.jpg"
+            },
+            {
+                "id": 35,
+                "Title": "Kung Fu Panda: Legends of Awesomeness",
+                "Year": "2011–2016",
+                "imdbID": "tt1545214",
+                "Type": "series",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BMDU2ZmMwNDktZTQyNi00MmI3LTkxZGUtYjEzYjM0ODgyNmU2XkEyXkFqcGdeQXVyODUwNjEzMzg@._V1_SX300.jpg"
+            },
+            {
+                "id": 36,
+                "Title": "Kung Fu Panda Holiday",
+                "Year": "2010",
+                "imdbID": "tt1702433",
+                "Type": "movie",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BMDg4YTg2MDktYjBmMi00ZTE5LTliZTktNGZmN2JkYmM0YzEwXkEyXkFqcGdeQXVyODMxNzcyNDI@._V1_SX300.jpg"
+            },
+            {
+                "id": 37,
+                "Title": "Kung Fu Panda: Secrets of the Masters",
+                "Year": "2011",
+                "imdbID": "tt1980162",
+                "Type": "movie",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BNjZmMWU3NDgtYTQ0MC00YzdlLTg0YWUtMDRkMTVlMzhhYTRlXkEyXkFqcGdeQXVyNDgyODgxNjE@._V1_SX300.jpg"
+            },
+            {
+                "id": 38,
+                "Title": "Kung Fu Panda: Secrets of the Scroll",
+                "Year": "2016",
+                "imdbID": "tt5513770",
+                "Type": "movie",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BOTA2ZmJjNDUtOWJjZC00ZWY5LTg1MGUtODMzODVkZmIyYTE1XkEyXkFqcGdeQXVyNjIzODI5OTQ@._V1_SX300.jpg"
+            },
+            {
+                "id": 39,
+                "Title": "Kung Fu Panda: The Dragon Knight",
+                "Year": "2022–",
+                "imdbID": "tt18783984",
+                "Type": "series",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BOGE1MWRiYzctYjQ3MC00YWI1LTg1MTgtMjUwYzRmMzI0NGIwXkEyXkFqcGdeQXVyMTQ3NDcxMzg4._V1_SX300.jpg"
+            },
+            {
+                "id": 40,
+                "Title": "Kung Fu Panda: The Paws of Destiny",
+                "Year": "2018–2019",
+                "imdbID": "tt8271176",
+                "Type": "series",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BZjBmYWMwYzMtZTRkMi00MjRhLTk3MmItZTkzYmNiYzdlMjhiXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_SX300.jpg"
+        },
+            {
+                "id": 41,
+                "Title": "Krishna Gaadi Veera Prema Gaadha",
+                "Year": "2016",
+                "imdbID": "tt5457840",
+                "Type": "movie",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BNjk0ZjFhYzItNTg2Mi00Mzg4LTlhODYtOGE0Njg1OGZjMzgyXkEyXkFqcGdeQXVyMjMxOTY5ODM@._V1_SX300.jpg"
+            },
+            {
+                "id": 42,
+                "Title": "Krishna Vrinda Vihari",
+                "Year": "2022",
+                "imdbID": "tt19893706",
+                "Type": "movie",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BNjMyYmI4ODItMzE3NS00ZDMwLThjODQtZTI5ZjFhZDdiZDNjXkEyXkFqcGdeQXVyMTI1NDEyNTM5._V1_SX300.jpg"
+            },
+            {
+                "id": 43,
+                "Title": "Shri Krishna",
+                "Year": "1993–1997",
+                "imdbID": "tt0268085",
+                "Type": "series",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BYzExNjNhNTAtNTU0Zi00MmM0LWExNTMtMzhmYzFlODczNWEwXkEyXkFqcGdeQXVyMjUyODk3NTY@._V1_SX300.jpg"
+            },
+            {
+                "id": 44,
+                "Title": "Krishna and His Leela",
+                "Year": "2020",
+                "imdbID": "tt11773276",
+                "Type": "movie",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BNjkxYTA2NmQtMmZlMi00NjgwLThmNTEtM2VkOGZhNzE5YjZhXkEyXkFqcGdeQXVyMjUxMTY3ODM@._V1_SX300.jpg"
+            },
+            {
+                "id": 45,
+                "Title": "Hare Krishna! The Mantra, the Movement and the Swami Who Started It",
+                "Year": "2017",
+                "imdbID": "tt6842524",
+                "Type": "movie",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BZmZmZjUwYjUtYWY5My00MjAyLWI4MDAtZDdlZDQ4ZTllYzQ0XkEyXkFqcGdeQXVyNTkwMjA4MzA@._V1_SX300.jpg"
+            },
+            {
+                "id": 46,
+                "Title": "Krishna Cottage",
+                "Year": "2004",
+                "imdbID": "tt0408976",
+                "Type": "movie",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BYzZiYjkzODAtNmE0OS00ZTNkLWI0NjYtMTgzYzcxZWRmNWIxXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SX300.jpg"
+            },
+            {
+                "id": 47,
+                "Title": "Katari Krishna",
+                "Year": "2021",
+                "imdbID": "tt15891800",
+                "Type": "movie",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BM2UxNDU1ZTAtMmQ3NS00NGZmLTk3M2YtMWYxZTAxYzMxZDdmXkEyXkFqcGdeQXVyOTc2MTgwNjY@._V1_SX300.jpg"
+            },
+            {
+                "id": 48,
+                "Title": "Haré Rama Haré Krishna",
+                "Year": "1971",
+                "imdbID": "tt0067183",
+                "Type": "movie",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BNmM5ZTk3NTQtZWRiZS00NzdiLThjNWQtNDlhMzIxOWY3MjFiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SX300.jpg"
+            },
+            {
+                "id": 49,
+                "Title": "Krishna: The Power of Indrakeeladri",
+                "Year": "2008",
+                "imdbID": "tt1173506",
+                "Type": "movie",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BODE4MjQ2MjAtMjMyOC00MGU5LThkNWMtYjU1M2MyMDA2YWJjXkEyXkFqcGdeQXVyOTk3NTc2MzE@._V1_SX300.jpg"
+            },
+            {
+                "id": 50,
+                "Title": "Chhota Bheem Aur Krishna",
+                "Year": "2008",
+                "imdbID": "tt2827516",
+                "Type": "movie",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BOTYyMDQyNjUyOV5BMl5BanBnXkFtZTgwMTAzMTU2NDE@._V1_SX300.jpg"
+            },
+            {
+                "id": 51,
+                "Title": "Dear Comrade",
+                "Year": "2019",
+                "imdbID": "tt8388508",
+                "Type": "movie",
+                "Poster": "https://m.media-amazon.com/images/M/MV5BMTdiNmVmOTAtMDNhZi00OTA1LWJhODEtNGE0ZmE2YjgxN2Y2XkEyXkFqcGdeQXVyODIwMDI1NjM@._V1_SX300.jpg"
+              }
+              
+
+     ]
+    
+}

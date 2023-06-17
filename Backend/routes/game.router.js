@@ -10,6 +10,7 @@ const gameRouter=express.Router()
 gameRouter.use(auth)
 // gameRouter.use(adminAuth)
 
+
 gameRouter.get("/",async(req,res)=>{
  
     try {
@@ -17,10 +18,11 @@ gameRouter.get("/",async(req,res)=>{
         res.status(200).json({game})
         
     } catch (error) {
-        res.status(400).json({err:err.message})
+        res.status(400).json({err:error})
     }
     
 })
+
 
 
 gameRouter.get("/page/:pagenum",async(req,res)=>{
@@ -30,7 +32,7 @@ gameRouter.get("/page/:pagenum",async(req,res)=>{
         const game=await GameModel.find({}).skip((pagenum-1)*Page_Size).limit(Page_Size)
         res.status(200).json({game})
     } catch (error) {
-        res.status(400).json({error:error.message})
+        res.status(400).json({error:error})
     }
 })
 
