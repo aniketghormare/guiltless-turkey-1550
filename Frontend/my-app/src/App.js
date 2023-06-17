@@ -3,13 +3,20 @@ import './App.css';
 
 import Games from "./Pages/Games"
 import Movies from './Pages/Movies';
+import Product from './Components/Product/ProductPage';
+import { Route, Routes } from 'react-router-dom';
+import MoviesPoster from './Components/Movies/Movie';
 function App() {
   return (
 
     <DIV className="App">
 
-      <Games/>
-      <Movies/>
+      {/* <Games/>
+      <Movies/> */}
+      <Routes>
+        <Route path="/game" element={<Product/>}/>
+        <Route path="/movie" element={<MoviesPoster/>}/>
+      </Routes>
 
     </DIV>
 
