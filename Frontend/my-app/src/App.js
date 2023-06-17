@@ -5,17 +5,18 @@ import Games from "./Pages/Games"
 import Movies from './Pages/Movies';
 import Navbar from './Components/Navbar';
 import Cart from './Pages/Cart';
-import MainRoutes from './Pages/MainRoutes';
+import { MainRoutes } from './Pages/MainRoutes';
+
 function App() {
   return (
 
 
-    <div className="App">
+    <DIV className="App">
       <Navbar/>
       <MainRoutes/>
      {/* <Games/> */}
      {/* <Cart/> */}
-    </div>
+    </DIV>
 
    
 
@@ -26,6 +27,6 @@ function App() {
 }
 
 export default App;
-// const DIV= styled.div`
-// text-align: center;
-// `
+const DIV= styled.div`
+text-align: center;
+`

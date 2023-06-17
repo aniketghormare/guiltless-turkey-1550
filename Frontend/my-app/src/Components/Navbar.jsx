@@ -15,6 +15,7 @@ const Navbar = () => {
       <Link to={"/bluray"}>Blu-ray</Link>
       <Link to={"/dvd"}>DVD</Link>
       <Link to={"/more"}>More Platforms</Link>
+      <Link to={"/cart"}>Cart</Link>
     </DIV>
   )
 }
