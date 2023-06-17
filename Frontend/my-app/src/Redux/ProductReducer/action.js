@@ -1,3 +1,4 @@
+
 import axios from "axios"
 import { GET_FAILURE, GET_PRODUCT_ID_SUCCESS, GET_REQUEST, GET_SUCCESS } from "./actionTypes"
 
@@ -12,3 +13,5 @@ export const getProducts=(query)=>(dispatch)=>{
         dispatch({type:GET_FAILURE})
     })
 }
+
+

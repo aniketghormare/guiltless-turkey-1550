@@ -23,7 +23,7 @@ const Sidebar = ({ active }) => {
   return (
     <Container sidebar={active}>
       <img src={Image} alt="icons" />
-      <FaTimes onClick={closeSidebar} />
+      <FaTimes style={{color:"#d4cfcf"}} onClick={closeSidebar} />
       <br />
       <button>Rent</button><button>Buy</button>
       
