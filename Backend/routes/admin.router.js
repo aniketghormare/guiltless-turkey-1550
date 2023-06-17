@@ -32,7 +32,7 @@ adminRouter.post("/login",async(req,res)=>{
       if(admin){
         bcrypt.compare(password,admin.password,(err,result)=>{
             if(result){
-                let token=jwt.sign({userID:admin._id,admin:admin.name},process.env.adminSecret,{ expiresIn: "7 days"})
+                let token=jwt.sign({adminID:admin._id,admin:admin.name},process.env.adminSecret,{ expiresIn: "7 days"})
                 res.status(200).json({msg:"Logged in", token})
             }else{
                 res.status(200).json({error:"wrong credentials"})

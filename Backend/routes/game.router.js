@@ -2,24 +2,19 @@ const express=require("express")
 const {GameModel}=require("../model/game.model")
 const jwt=require("jsonwebtoken")
 const { auth } = require("../middleware/auth.middleware")
+
 require("dotenv").config()
 
 const gameRouter=express.Router()
 
 gameRouter.use(auth)
+// gameRouter.use(adminAuth)
 
-gameRouter.post("/add",async(req,res)=>{
-    try{
-        const game=new GameModel(req.body)
-        await game.save()
-        res.status(200).json({msg:"Game has been added", game:req.body})
-    }catch(err){
-        res.status(400).json({err:err})
-    }
-})
+
 gameRouter.get("/",async(req,res)=>{
+ 
     try {
-        const game= await GameModel.find({userId:req.body.userId})
+        const game= await GameModel.find()
         res.status(200).json({game})
         
     } catch (error) {
@@ -28,44 +23,6 @@ gameRouter.get("/",async(req,res)=>{
     
 })
 
-gameRouter.patch("/update/:gameID",async(req,res)=>{
-    const userDocId=req.body.userID
-    const {gameID}=req.params
-    try {
-        const game=await GameModel.findOne({_id:gameID});
-        const userGameId=game.userID
-
-        if(userDocId===userGameId){
-            await GameModel.findByIdAndUpdate({_id:gameID},req.body)
-            res.status(200).json({msg:"Game has been updated"})
-        }else{
-            res.status(200).json({msg:"Not Authorized"})
-        }
-        
-    } catch (error) {
-        res.status(400).json({error:error})
-    }
-    
-    
-})
-gameRouter.delete("/delete/:gameID",async(req,res)=>{
-    const userDocId=req.body.userID
-    const {gameID}=req.params
-    try {
-        const game=await GameModel.findOne({_id:gameID});
-        const userGameId=game.userID
-
-        if(userDocId===userGameId){
-            await GameModel.findByIdAndDelete({_id:gameID})
-            res.status(200).json({msg:"Game has been deleted"})
-        }else{
-            res.status(200).json({msg:"Not Authorized"})
-        }
-        
-    } catch (error) {
-        res.status(400).json({error:error})
-    }
-})
 
 
 gameRouter.get("/page/:pagenum",async(req,res)=>{

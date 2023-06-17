@@ -4,7 +4,8 @@ const MovieSchema=mongoose.Schema({
     title : String,
     desc : String,
     rating : Number,
-    userID:String
+    userID:String,
+    adminID: String
 },{
     versionKey:false
 })

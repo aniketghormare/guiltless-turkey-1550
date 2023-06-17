@@ -1,10 +1,14 @@
 const mongoose=require("mongoose")
 
 const GameSchema=mongoose.Schema({
-    title : String,
-    desc : String,
-    rating : Number,
-    userID:String
+    name : String,
+    avatar : String,
+    genre : String,
+    price: Number,
+    category: String,
+    type: String,
+    userID:String,
+    adminID: String
 },{
     versionKey:false
 })
