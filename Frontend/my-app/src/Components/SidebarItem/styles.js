@@ -8,7 +8,7 @@ height: auto;
   font-size: 14px;
   font-weight: 500;
   color: white;
-  padding: 10px;
+  padding: 8px;
   cursor: pointer;
   border-radius: 10px;
   margin: 0 15px 20px;

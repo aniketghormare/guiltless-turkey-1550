@@ -54,7 +54,7 @@ export const Collective = () => {
 const DIV = styled.div`
     height: 200vh;
     background-color: white;
-    margin-top: 85vh;
+    margin-top: 8vh;
 
     h2{
         padding-top:20px;
