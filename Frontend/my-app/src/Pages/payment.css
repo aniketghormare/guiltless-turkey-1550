@@ -1,0 +1,84 @@
+#ten10_off a {
+    text-decoration: none;
+    display: block;
+    padding-top: 4px;
+    color: white;
+  }
+  #ten10_off {
+    text-align: center;
+    width: 99%;
+    height: 30px;
+    background-color: rgb(32, 103, 190);
+  }
+  #chek_split {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  #chek_split a {
+    color: black;
+    display: block;
+  }
+  #chek_split input {
+    padding: 5px;
+    border-radius: 4px;
+  }
+  #chek_split button {
+    width: 100%;
+  }
+  #checkinf {
+    display: flex;
+  }
+  #chek_split_1 {
+    width: 100%;
+    padding: 20px;
+  }
+  #chek_split_1 > div {
+    box-shadow: rgba(0, 0, 0, 0) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    padding: 5%;
+    margin: 30px 0px;
+  }
+  
+  #chek_split_1 input[type="text"] {
+    width: 97%;
+    border: 0.5px solid silver;
+    margin: 10px 5px 0px 0px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px;
+  }
+  
+  #chek_split_2 {
+    width: 90%;
+    padding: 5%;
+    height: auto;
+    margin: 20px;
+    box-shadow: rgba(0, 0, 0, 0) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  }
+  #chek_split_2 > div {
+    padding: 5%;
+    height: auto;
+    margin: 20px;
+    box-shadow: rgba(0, 0, 0, 0) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  }
+  #chek_split_2 > div > div {
+    display: flex;
+    justify-content: space-between;
+  }
+  #chek_split_2 > div > div > button {
+    background-color: rgb(32, 103, 190);
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+  }
+  #chek_split_2 > div > div > button:hover {
+    background-color: rgb(16, 58, 107);
+  }
+  
+  @media (max-width: 800px) {
+    #chek_split {
+      display: block;
+      width: 90%;
+      margin: auto;
+    }
+  }

@@ -11,6 +11,7 @@ import Simple from './Singlepage'
 
 import Games from './Games'
 import Movies from "./Movies"
+import PaymentPage from './Payment'
 
 export const MainRoutes = () => {
   return <Routes>
@@ -19,7 +20,7 @@ export const MainRoutes = () => {
     <Route path='/games' element={<Games/>}/>
     <Route path='/movies' element={<Movies/>}/>
     <Route path='/cart' element={<Cart/>}/>
-    
+    <Route path="/payment" element={<PaymentPage/>}/>
   </Routes>
 }
 
