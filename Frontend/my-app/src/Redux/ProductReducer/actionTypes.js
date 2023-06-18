@@ -11,3 +11,4 @@ export const GAMES_FAIL="GAMES_FAIL"
 export const MOVIES_SUCC="MOVIES_SUCC"
 export const CART_SUCC="CART_SUCC"
 
+export const SHOW_SUCC="SHOW_SUCC"

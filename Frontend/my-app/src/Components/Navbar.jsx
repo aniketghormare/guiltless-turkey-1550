@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom'
 import { InputGroup, Input, InputRightElement, IconButton, Box, Badge  } from '@chakra-ui/react';
 import { FaSearch, FaShoppingCart } from 'react-icons/fa';
 import Image from '../../src/Images/GAMEZY-removebg-preview.png'
+import Games from '../Pages/Games';
 
 const Navbar = () => {
   return (
@@ -67,7 +68,6 @@ const Navbar = () => {
       <Link style={{textDecoration:"none",color:"tomato"}} to={"/more"}>More Platforms</Link>
       </div>
       
-
       
 
     </DIV>

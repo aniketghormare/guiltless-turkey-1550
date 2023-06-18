@@ -1,13 +1,20 @@
 import React from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import styled from 'styled-components'
+import { SHOW_SUCC } from '../Redux/ProductReducer/actionTypes'
 
 export const MiddlePart = () => {
+    
+    const dispatch = useDispatch()
+    const handleShow=()=>{
+        dispatch({type: SHOW_SUCC})
+    }
   return (
     <DIV>
         <h1>Rent Thousands of Games & Movies</h1>
         <h2>NO LATE FEES. CANCEL ANYTIME.</h2>
         <div>
-           <button >Start Free Trial</button>
+           <button onClick={handleShow}>Start Free Trial</button>
         </div>
     </DIV>
   )
