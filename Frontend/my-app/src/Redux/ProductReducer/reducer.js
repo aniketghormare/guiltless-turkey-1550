@@ -1,5 +1,5 @@
 
-import { CART_SUCC, GAMES_FAIL, GAMES_REQ, GAMES_SUCC, MOVIES_SUCC, GET_FAILURE, GET_PRODUCT_ID_SUCCESS, GET_REQUEST, GET_SUCCESS  } from "./actionTypes"
+import { CART_SUCC, GAMES_FAIL, GAMES_REQ, GAMES_SUCC, MOVIES_SUCC, GET_FAILURE, GET_PRODUCT_ID_SUCCESS, GET_REQUEST, GET_SUCCESS, SHOW_SUCC  } from "./actionTypes"
 
 
 const init = {
@@ -8,7 +8,8 @@ const init = {
     Games: [],
   products:[],
     Movies: [],
-    CART: []
+    CART: [],
+    show: true
 }
 export const reducer = (state = init, { type, payload }) => {
     switch (type) {
@@ -32,6 +33,8 @@ export const reducer = (state = init, { type, payload }) => {
             return { ...state, isLoading: false, Movies: payload }
         case CART_SUCC:
             return { ...state, isLoading: false, CART: payload }
+        case SHOW_SUCC:
+                return { ...state, isLoading: false, show: !state.show }    
         default:
             return state
 

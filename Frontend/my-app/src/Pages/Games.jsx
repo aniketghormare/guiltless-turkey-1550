@@ -68,7 +68,7 @@ const Games = () => {
   console.log(gamedata)
   return (
     <Div>
-      <h1>Games</h1>
+      {/* <h1>Games</h1> */}
       <div className='cordiv'>
         <Carousel className='carousel' breakPoints={items} style={{ backgroundColor: "rgb(249,249,249" }}>
           {items.map(item => <div className='initdiccorosal' key={item.id}>

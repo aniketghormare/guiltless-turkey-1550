@@ -5,36 +5,45 @@ import {MiddlePart} from './Components/MiddlePart'
 import {Collective} from './Components/Collective'
 import Navbar from './Components/Navbar';
 
+
 import bgImage from './Images/background_image.mp4'
 import Login from './Components/Login';
 
 import Games from "./Pages/Games"
 import Movies from './Pages/Movies';
+import { useSelector } from 'react-redux';
+import { MainRoutes } from './Pages/MainRoutes';
+import { BrowserRouter } from 'react-router-dom';
 
 
 
 function App() {
+  const show = useSelector((store)=>{
+    return store.ProductReducer.show
+})
+console.log(show);
   return (
-    <>
-    <DIV className="App">
-
-
-     
+    <BrowserRouter>
+    {
+      show ? 
+      <DIV className="App">
+        <video autoPlay loop muted>
+          <source src={bgImage} type='video/mp4'/>
+        </video>
+        <Header/>
+        <MiddlePart/>
+        <Collective/>
+  
+      </DIV> :
+       <div className="App">
+       <Navbar/>
+       <MainRoutes/>
+       </div>
+      
+      
+    }
+    </BrowserRouter>
     
-
-
-      <video autoPlay loop muted>
-        <source src={bgImage} type='video/mp4'/>
-      </video>
-      <Header/>
-      <MiddlePart/>
-      <Collective/>
-
-    </DIV>
-    {/* <Collective/> */}
-    {/* <Navbar/> */}
-    {/* <Login/> */}
-    </>
 
 
   );

@@ -30,13 +30,13 @@ export const Container = styled.div`
         margin-top: 60px;
     }
     
-    > button {
-        position: fixed;
+    .btn {
+    position: fixed;
     background-color: #ffffff;
     color: #ffffff;
     background-color: tomato;
     padding: 8px 16px;
-    margin-top: 55px;
+    margin-top: 15px;
     margin-right: 10px;
     margin-left: 85%;
     font-size: 16px;
