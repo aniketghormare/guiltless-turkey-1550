@@ -19,7 +19,7 @@ const Movies = () => {
     { id: 4, title: 'item #4',img:"https://cms2.gameflycdn.com/merchandising/live/Design/default/1920w/5039866.jpg"  },
     { id: 5, title: 'item #5' ,img:"https://cms2.gameflycdn.com/merchandising/live/Design/default/1920w/20394.jpg" }
   ]
-  const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2NDhkMWVhYzc2Y2I4OTg1MzU2YWNjODkiLCJ1c2VyIjoiQW5pa2V0IiwiaWF0IjoxNjg2OTcwMTI2LCJleHAiOjE2ODc1NzQ5MjZ9.Co-GeTjfSRTsswT2Nsd1g4TSRYLCJov3NkmGulgj1gI"
+  const token =  JSON.parse(localStorage.getItem("token"))
   let column = 5
   const getgames = () => {
     fetch("http://localhost:4500/movies", {
@@ -58,6 +58,7 @@ const Movies = () => {
       //setdata(data.cart)
       console.log(data)
       console.log("added cart")
+      alert("Product Added To The Cart")
     }).catch((err) => {
       console.log(err)
     })
@@ -89,10 +90,10 @@ const Movies = () => {
                     return (
                       <Carousel1.Item style={{ height: "100%", width: "200px" }}>
                         <img width="80%"alt="img"  height="260px" src={el.Poster} />
-                        <h4>{el.Title}</h4>
+                        <h4>{el.Title.substring(0,70)}</h4>
                         <p>{el.Year}</p>
                         <div style={{ display: "flex", height: "auto", width: "80%", border: "1px solid rgb(249,249,249)", margin: "auto" }}>
-                          <button onClick={()=>handlecart(el)} style={{ display: "flex", width: "100%", margin: "auto", borderRadius: "5px", justifyContent: "space-between", backgroundColor: "rgb(86,118,169", color: "white" }}>
+                          <button onClick={()=>handlecart(el)} style={{ display: "flex", width: "100%", margin: "auto", borderRadius: "5px", justifyContent: "space-between", backgroundColor: "rgb(255,75,43)",borderColor:"rgb(255,75,43)", color: "white" }}>
                             <h4>See More</h4>
                             <h4>${el.price}</h4>
                           </button>
@@ -127,10 +128,10 @@ const Movies = () => {
                     return (
                       <Carousel1.Item style={{ height: "100%", width: "200px" }}>
                         <img width="80%"alt="img"  height="260px" src={el.Poster} />
-                        <h4>{el.Title}</h4>
+                        <h4>{el.Title.substring(0,70)}</h4>
                         <p>{el.Year}</p>
                         <div style={{ display: "flex", height: "auto", width: "80%", border: "1px solid rgb(249,249,249)", margin: "auto" }}>
-                          <button style={{ display: "flex", width: "100%", margin: "auto", borderRadius: "5px", justifyContent: "space-between", backgroundColor: "rgb(86,118,169", color: "white" }}>
+                          <button style={{ display: "flex", width: "100%", margin: "auto", borderRadius: "5px", justifyContent: "space-between", backgroundColor: "rgb(255,75,43)",borderColor:"rgb(255,75,43)", color: "white" }}>
                             <h4>See More</h4>
                             <h4>${el.price}</h4>
                           </button>
@@ -165,10 +166,10 @@ const Movies = () => {
                     return (
                       <Carousel1.Item style={{ height: "100%", width: "200px" }}>
                         <img width="80%"alt="img" height="260px" src={el.Poster} />
-                        <h4>{el.Title}</h4>
+                        <h4>{el.Title.substring(0,70)}</h4>
                         <p>{el.Year}</p>
                         <div style={{ display: "flex", height: "auto", width: "80%", border: "1px solid rgb(249,249,249)", margin: "auto" }}>
-                          <button style={{ display: "flex", width: "100%", margin: "auto", borderRadius: "5px", justifyContent: "space-between", backgroundColor: "rgb(86,118,169", color: "white" }}>
+                          <button style={{ display: "flex", width: "100%", margin: "auto", borderRadius: "5px", justifyContent: "space-between",  backgroundColor: "rgb(255,75,43)",borderColor:"rgb(255,75,43)", color: "white" }}>
                             <h4>See More</h4>
                             <h4>${el.price}</h4>
                           </button>
@@ -205,10 +206,10 @@ const Movies = () => {
                     return (
                       <Carousel1.Item style={{ height: "100%", width: "200px" }}>
                         <img width="80%"alt="img"  height="260px" src={el.Poster} />
-                        <h4>{el.Title}</h4>
+                        <h4>{el.Title.substring(0,70)}</h4>
                         <p>{el.Year}</p>
                         <div style={{ display: "flex", height: "auto", width: "80%", border: "1px solid rgb(249,249,249)", margin: "auto" }}>
-                          <button style={{ display: "flex", width: "100%", margin: "auto", borderRadius: "5px", justifyContent: "space-between", backgroundColor: "rgb(86,118,169", color: "white" }}>
+                          <button style={{ display: "flex", width: "100%", margin: "auto", borderRadius: "5px", justifyContent: "space-between", backgroundColor: "rgb(255,75,43)",borderColor:"rgb(255,75,43)", color: "white" }}>
                             <h4>See More</h4>
                             <h4>${el.price}</h4>
                           </button>

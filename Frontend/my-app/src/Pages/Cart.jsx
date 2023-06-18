@@ -4,11 +4,14 @@ import { useDispatch, useSelector } from 'react-redux'
 import styled from 'styled-components'
 import { CART_SUCC, TOTAL_SUCC } from '../Redux/ProductReducer/actionTypes'
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const Cart = () => {
-    const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2NDhkMWVhYzc2Y2I4OTg1MzU2YWNjODkiLCJ1c2VyIjoiQW5pa2V0IiwiaWF0IjoxNjg3MDAzNzMyLCJleHAiOjE2ODc2MDg1MzJ9.6b5pIvD-6qYORF9JQ9zE853_Ubj9pHS7rHksAhiBwFY"
+     const [cartrem,setcartremove]=useState(false)
+    const token = JSON.parse(localStorage.getItem("token"))
     const dispatch = useDispatch()
     const [val,setval]=useState(1)
+    const navigate=useNavigate()
      //let [count,setcount]=useState(0)
     const total=useSelector((store)=>{
         return store.ProductReducer.total
@@ -48,16 +51,36 @@ const Cart = () => {
         dispatch({type:TOTAL_SUCC,payload:total})
       }
   
-
+    const cartremove= (el)=>{
+        const {_id}=el
+           console.log(el)
+         fetch(`http://localhost:4500/cart/remove/${_id}`,{
+            method:"DELETE",
+            headers:{
+                "Content-Type":"application/json",
+                "Authorization": `Bearer ${token}`
+            }
+         }).then((res)=>{
+            return res.json()
+         }).then((data)=>{
+            console.log(data)
+            setcartremove(!cartrem)
+            console.log("eleemet removed")
+         }).catch((err)=>{
+            console.log(err)
+         })
+    }
 
     useEffect(() => {
         getcart()
-    }, [val])
+    }, [val,total,cartrem])
     useEffect(()=>{
         carttotal()
     },[val])
   
-   
+   const handlepayment=()=>{
+    navigate("/payment")
+   }
     
     console.log(cartdata)
     
@@ -67,7 +90,7 @@ const Cart = () => {
             <div className='container'>
                 <div className='total'>
                     <h3>Subtotal:${total}</h3>
-                    <button className='btn'>CHECKOUT</button>
+                    <button onClick={handlepayment} className='btn'>CHECKOUT</button>
                 </div>
                 <div>
                     <p style={{ marginLeft: "0px" }}>Shipping, Tax & Coupons are applied on the next page.</p>
@@ -104,7 +127,7 @@ const Cart = () => {
                                             <option value="4">4</option>
                                             <option value="5">5</option>
                                         </select>
-                                        <button style={{ backgroundColor: "rgb(249,249,249)", borderColor: "white", color: "rgb(191,87,32)", border: "none" }}>Remove</button>
+                                        <button onClick={()=>cartremove(el)} style={{ backgroundColor: "rgb(249,249,249)", borderColor: "white", color: "rgb(191,87,32)", border: "none" }}>Remove</button>
                                     </div>
                                     
                                 </div>

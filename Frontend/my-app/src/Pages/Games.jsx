@@ -21,7 +21,7 @@ const Games = () => {
   ]
 
 
-  const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2NDhkMWVhYzc2Y2I4OTg1MzU2YWNjODkiLCJ1c2VyIjoiQW5pa2V0IiwiaWF0IjoxNjg3MDAzNzMyLCJleHAiOjE2ODc2MDg1MzJ9.6b5pIvD-6qYORF9JQ9zE853_Ubj9pHS7rHksAhiBwFY"
+  const token = JSON.parse(localStorage.getItem("token"))
   let column = 5
   const getgames = () => {
     fetch("http://localhost:4500/games", {
@@ -92,10 +92,10 @@ const Games = () => {
                     return (
                       <Carousel1.Item style={{ height: "100%", width: "200px" }}>
                         <img width="80%"alt="img"  height="260px" src={el.avatar} />
-                        <h4>{el.name}</h4>
+                        <h4>{el.name.substring(0,70)}</h4>
                         <p>{el.genre}</p>
                         <div style={{ display: "flex", height: "auto", width: "80%", border: "1px solid rgb(249,249,249)", margin: "auto" }}>
-                          <button onClick={()=>handlecart(el)} style={{ display: "flex", width: "100%", margin: "auto", borderRadius: "5px", justifyContent: "space-between", backgroundColor: "rgb(86,118,169", color: "white" }}>
+                          <button onClick={()=>handlecart(el)} style={{ display: "flex", width: "100%", margin: "auto", borderRadius: "5px", justifyContent: "space-between", backgroundColor: "rgb(255,75,43)",borderColor:"rgb(255,75,43)", color: "white" }}>
                             <h4>See More</h4>
                             <h4>${el.price}</h4>
                           </button>
@@ -130,10 +130,10 @@ const Games = () => {
                     return (
                       <Carousel1.Item style={{ height: "100%", width: "200px" }}>
                         <img width="80%"alt="img"  height="260px" src={el.avatar} />
-                        <h4>{el.name}</h4>
+                        <h4>{el.name.substring(0,70)}</h4>
                         <p>{el.genre}</p>
                         <div style={{ display: "flex", height: "auto", width: "80%", border: "1px solid rgb(249,249,249)", margin: "auto" }}>
-                          <button style={{ display: "flex", width: "100%", margin: "auto", borderRadius: "5px", justifyContent: "space-between", backgroundColor: "rgb(86,118,169", color: "white" }}>
+                          <button style={{ display: "flex", width: "100%", margin: "auto", borderRadius: "5px", justifyContent: "space-between",  backgroundColor: "rgb(255,75,43)",borderColor:"rgb(255,75,43)", color: "white" }}>
                             <h4>See More</h4>
                             <h4>${el.price}</h4>
                           </button>
@@ -168,10 +168,10 @@ const Games = () => {
                     return (
                       <Carousel1.Item style={{ height: "100%", width: "200px" }}>
                         <img width="80%"alt="img"  height="260px" src={el.avatar} />
-                        <h4>{el.name}</h4>
+                        <h4>{el.name.substring(0,70)}</h4>
                         <p>{el.genre}</p>
                         <div style={{ display: "flex", height: "auto", width: "80%", border: "1px solid rgb(249,249,249)", margin: "auto" }}>
-                          <button style={{ display: "flex", width: "100%", margin: "auto", borderRadius: "5px", justifyContent: "space-between", backgroundColor: "rgb(86,118,169", color: "white" }}>
+                          <button style={{ display: "flex", width: "100%", margin: "auto", borderRadius: "5px", justifyContent: "space-between",  backgroundColor: "rgb(255,75,43)",borderColor:"rgb(255,75,43)", color: "white" }}>
                             <h4>See More</h4>
                             <h4>${el.price}</h4>
                           </button>
@@ -208,10 +208,10 @@ const Games = () => {
                     return (
                       <Carousel1.Item style={{ height: "100%", width: "200px" }}>
                         <img width="80%"alt="img"  height="260px" src={el.avatar} />
-                        <h4>{el.name}</h4>
+                        <h4>{el.name.substring(0,70)}</h4>
                         <p>{el.genre}</p>
                         <div style={{ display: "flex", height: "auto", width: "80%", border: "1px solid rgb(249,249,249)", margin: "auto" }}>
-                          <button style={{ display: "flex", width: "100%", margin: "auto", borderRadius: "5px", justifyContent: "space-between", backgroundColor: "rgb(86,118,169", color: "white" }}>
+                          <button style={{ display: "flex", width: "100%", margin: "auto", borderRadius: "5px", justifyContent: "space-between",  backgroundColor: "rgb(255,75,43)",borderColor:"rgb(255,75,43)", color: "white" }}>
                             <h4>See More</h4>
                             <h4>${el.price}</h4>
                           </button>
