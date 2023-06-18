@@ -14,6 +14,7 @@ import Movies from './Pages/Movies';
 import { useSelector } from 'react-redux';
 import { MainRoutes } from './Pages/MainRoutes';
 import { BrowserRouter } from 'react-router-dom';
+import Footer from './Pages/Footer';
 
 
 
@@ -35,10 +36,11 @@ console.log(show);
         <Collective/>
   
       </DIV> :
-       <div className="App">
+       <DIV className="App">
        <Navbar/>
        <MainRoutes/>
-       </div>
+       <Footer/>
+       </DIV>
       
       
     }

@@ -12,3 +12,4 @@ export const MOVIES_SUCC="MOVIES_SUCC"
 export const CART_SUCC="CART_SUCC"
 
 export const SHOW_SUCC="SHOW_SUCC"
+export const TOTAL_SUCC="TOTAL_SUCC"
