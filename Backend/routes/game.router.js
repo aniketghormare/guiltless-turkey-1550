@@ -23,6 +23,18 @@ gameRouter.get("/",async(req,res)=>{
     
 })
 
+// gameRouter.get("/",async(req,res)=>{
+//     const query=req.query
+ 
+//     try {
+//         const game= await GameModel.find({query})
+//         res.status(200).json({game})
+        
+//     } catch (error) {
+//         res.status(400).json({err:error})
+//     }
+    
+// })
 
 
 gameRouter.get("/page/:pagenum",async(req,res)=>{
