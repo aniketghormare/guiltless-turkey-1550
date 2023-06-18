@@ -1,12 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 import { InputGroup, Input, InputRightElement, IconButton, Box, Badge  } from '@chakra-ui/react';
 import { FaSearch, FaShoppingCart } from 'react-icons/fa';
 import Image from '../../src/Images/GAMEZY-removebg-preview.png'
 import Games from '../Pages/Games';
+import { Button } from './Components';
 
 const Navbar = () => {
+  const navigate=useNavigate()
+
+  const handlenavigate=()=>{
+      navigate("/cart")
+  }
   return (
     <DIV>
 
@@ -43,6 +49,7 @@ const Navbar = () => {
         </div>
         <div>
           <Box>
+            <Button onClick={handlenavigate}>
             <IconButton className='cartbtn'
               aria-label="Cart"
               icon={<FaShoppingCart />}
@@ -52,6 +59,7 @@ const Navbar = () => {
             <Badge colorScheme="red" borderRadius="full" position="absolute" top="-1" right="-1">
         
             </Badge>
+            </Button>
           </Box>
         </div>
       </div>

@@ -41,6 +41,27 @@ const Movies = () => {
   useEffect(() => {
     getgames()
   }, [])
+  const handlecart=(el)=>{
+    
+    console.log(el)
+    fetch("http://localhost:4500/cart/add", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${token}`
+      },
+      body:JSON.stringify(el)
+    }).then((res) => {
+      return res.json()
+    }).then((data) => {
+     // dispatch({type:CART_SUCC})
+      //setdata(data.cart)
+      console.log(data)
+      console.log("added cart")
+    }).catch((err) => {
+      console.log(err)
+    })
+  }
   console.log(data)
   return (
     <Div>
@@ -71,7 +92,7 @@ const Movies = () => {
                         <h4>{el.Title}</h4>
                         <p>{el.Year}</p>
                         <div style={{ display: "flex", height: "auto", width: "80%", border: "1px solid rgb(249,249,249)", margin: "auto" }}>
-                          <button style={{ display: "flex", width: "100%", margin: "auto", borderRadius: "5px", justifyContent: "space-between", backgroundColor: "rgb(86,118,169", color: "white" }}>
+                          <button onClick={()=>handlecart(el)} style={{ display: "flex", width: "100%", margin: "auto", borderRadius: "5px", justifyContent: "space-between", backgroundColor: "rgb(86,118,169", color: "white" }}>
                             <h4>See More</h4>
                             <h4>${el.price}</h4>
                           </button>
