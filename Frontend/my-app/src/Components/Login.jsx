@@ -61,7 +61,8 @@ import { useDispatch } from "react-redux";
         })
      }
       return(
-          <Components.Container>
+          <div style={{width:"50%" ,margin:"auto",marginTop:"50px"}}>
+            <Components.Container>
               <Components.SignUpContainer signinIn={signIn}>
                   <Components.Form>
                       <Components.Title>Create Account</Components.Title>
@@ -110,6 +111,7 @@ import { useDispatch } from "react-redux";
               </Components.OverlayContainer>
 
           </Components.Container>
+          </div>
       )
  }
 

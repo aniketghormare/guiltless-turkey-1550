@@ -40,7 +40,7 @@ const ListHeader = ({ children }) => {
 
 export default function Footer() {
   return (
-    <Box
+    <Box backgroundColor={"#B0BEC5"}
       bg={useColorModeValue('gray.50', 'gray.900')}
       color={useColorModeValue('gray.700', 'gray.200')} style={{width:"100%",height:"auto"}}>
     
@@ -50,52 +50,52 @@ export default function Footer() {
           templateColumns={{ sm: '1fr 1fr', md: '2fr 1fr 1fr 1fr 1fr' }}
           spacing={8} style={{width:"100%",height:"auto"}}>
             <Flex >
-            <Box style={{width:"30%",height:"auto"}}>
+            <Box style={{width:"35%",height:"auto"}}>
             <Flex>
           <Stack spacing={6}>
             <Box>
-              <Logo color={useColorModeValue('gray.700', 'white')} />
+              <h1 style={{color:"#E040FB"}}><i>~GAMEZY~</i></h1>
             </Box>
-            <Text fontSize={'sm'}>
-              © 2022 Chakra Templates. All rights reserved
+            <Text style={{paddingTop:"80px",fontSize:"15px",paddingLeft:"45px",backgroundColor:"#B0BEC5"}}>
+            Copyright © 2023, GAMEZY Limited. All Rights Reserved
             </Text>
           </Stack>
           </Flex>
           </Box>
          
-            <Box style={{width:"70%",height:"auto"}}>
+            <Box style={{width:"65%",height:"auto",display:"flex"}}>
             <Flex>
-          <Stack align={'flex-start'}>
-            <ListHeader>Product</ListHeader>
-            <Link href={'#'}>Overview</Link>
-            <Link href={'#'}>Features</Link>
-            <Link href={'#'}>Tutorials</Link>
-            <Link href={'#'}>Pricing</Link>
-            <Link href={'#'}>Releases</Link>
+          <Stack align={'flex-start'} style={{paddingLeft:"170px",}}>
+            <h4 style={{backgroundColor:"#B0BEC5",padding:"0px"}}>Product</h4>
+            <Link textDecoration={"none"} href={'#'}>Overview</Link>
+            <Link textDecoration={"none"} href={'#'}>Features</Link>
+            <Link textDecoration={"none"}  href={'#'}>Tutorials</Link>
+            <Link textDecoration={"none"}  href={'#'}>Pricing</Link>
+            <Link textDecoration={"none"}  href={'#'}>Releases</Link>
           </Stack>
-          <Stack align={'flex-start'}>
-            <ListHeader>Company</ListHeader>
-            <Link href={'#'}>About</Link>
-            <Link href={'#'}>Press</Link>
-            <Link href={'#'}>Careers</Link>
-            <Link href={'#'}>Contact</Link>
-            <Link href={'#'}>Partners</Link>
+          <Stack align={'flex-start'} style={{paddingLeft:"80px"}}>
+          <h4 style={{backgroundColor:"#B0BEC5",padding:"0px"}}>Company</h4>
+            <Link textDecoration={"none"}  href={'#'}>About</Link>
+            <Link textDecoration={"none"}  href={'#'}>Press</Link>
+            <Link textDecoration={"none"}  href={'#'}>Careers</Link>
+            <Link  textDecoration={"none"} href={'#'}>Contact</Link>
+            <Link textDecoration={"none"}  href={'#'}>Partners</Link>
           </Stack>
-          <Stack align={'flex-start'}>
-            <ListHeader>Support</ListHeader>
-            <Link href={'#'}>Help Center</Link>
-            <Link href={'#'}>Terms of Service</Link>
-            <Link href={'#'}>Legal</Link>
-            <Link href={'#'}>Privacy Policy</Link>
-            <Link href={'#'}>Status</Link>
+          <Stack align={'flex-start'} style={{paddingLeft:"80px"}}>
+          <h4 style={{backgroundColor:"#B0BEC5",padding:"0px"}}>Support</h4>
+            <Link textDecoration={"none"}  href={'#'}>Help Center</Link>
+            <Link textDecoration={"none"}  href={'#'}>Terms of Service</Link>
+            <Link textDecoration={"none"}  href={'#'}>Legal</Link>
+            <Link textDecoration={"none"}  href={'#'}>Privacy Policy</Link>
+            <Link textDecoration={"none"}  href={'#'}>Status</Link>
           </Stack>
-          <Stack align={'flex-start'}>
-            <ListHeader>Follow Us</ListHeader>
-            <Link href={'#'}>Facebook</Link>
-            <Link href={'#'}>Twitter</Link>
-            <Link href={'#'}>Dribbble</Link>
-            <Link href={'#'}>Instagram</Link>
-            <Link href={'#'}>LinkedIn</Link>
+          <Stack align={'flex-start'} style={{paddingLeft:"80px"}}>
+          <h4 style={{backgroundColor:"#B0BEC5",padding:"0px"}}>Follow Us</h4>
+            <Link textDecoration={"none"}  href={'#'}>Facebook</Link>
+            <Link textDecoration={"none"}  href={'#'}>Twitter</Link>
+            <Link textDecoration={"none"}  href={'#'}>Dribbble</Link>
+            <Link  textDecoration={"none"} href={'#'}>Instagram</Link>
+            <Link textDecoration={"none"}  href={'#'}>LinkedIn</Link>
           </Stack>
           </Flex>
           </Box>

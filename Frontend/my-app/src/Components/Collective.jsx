@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Footer from '../Pages/Footer'
 
 export const Collective = () => {
   return (
@@ -39,7 +40,7 @@ export const Collective = () => {
             
         </div>
         </div>
-            <div className='spl' style={{marginTop:"40px"}}>
+            <div className='spl' style={{marginTop:"40px",paddingRight:"120px"}}>
                 <span>RENT THOUSANDS OF GAMES & MOVIES <button>Start Free Trial</button> NO LATE FEES.  CANCEL ANYTIME.</span>
             </div>
             <div>
@@ -48,6 +49,7 @@ export const Collective = () => {
             <div>
                 <h5>GameFly is America’s go-to source for new and classic movie and video game rentals. With thousands of titles to choose from, you can rent films or new and used video games without worrying about any late fees. If you like your rented game or movie enough, you can even choose to keep it from us for a low, pre-owned price. Not happy with your rental? Send it back and we’ll rush your next movie or video game rental to your doorstep for free, so you can watch your flick or get your game on ASAP. Whether you play one of today’s hottest systems or enjoy the nostalgia of systems past, you’ll find all the best new and used video games at GameFly. Start your free trial today!</h5>
             </div>
+            <Footer/>
     </DIV>
   )
 }

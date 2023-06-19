@@ -49,7 +49,7 @@ const Navbar = () => {
         </div>
         <div>
           <Box>
-            <Button onClick={handlenavigate}>
+            <Button style={{backgroundColor:"white",height:"35px",border:"none"}} onClick={handlenavigate}>
             <IconButton className='cartbtn'
               aria-label="Cart"
               icon={<FaShoppingCart />}
@@ -123,8 +123,6 @@ const DIV = styled.div`
   .cartbtn{
     width: 40px;
     height: 40px;
-    margin-top: 19px;
-    margin-left: 20px;
     border-radius: 50%;
     color: black;
     border: 1px solid #c4c0c0;
