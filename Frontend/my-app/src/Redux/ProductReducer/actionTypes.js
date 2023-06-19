@@ -13,3 +13,6 @@ export const CART_SUCC="CART_SUCC"
 
 export const SHOW_SUCC="SHOW_SUCC"
 export const TOTAL_SUCC="TOTAL_SUCC"
+export const ADMIN_SUCC="ADMIN_SUCC"
+
+export const REFRESH_SUCC="REFRESH_SUCC"

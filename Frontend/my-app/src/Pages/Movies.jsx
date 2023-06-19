@@ -22,7 +22,7 @@ const Movies = () => {
   const token =  JSON.parse(localStorage.getItem("token"))
   let column = 5
   const getgames = () => {
-    fetch("http://localhost:4500/movies", {
+    fetch("https://aware-lime-caiman.cyclic.app/movies", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -44,7 +44,7 @@ const Movies = () => {
   const handlecart=(el)=>{
     
     console.log(el)
-    fetch("http://localhost:4500/cart/add", {
+    fetch("https://aware-lime-caiman.cyclic.app/cart/add", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

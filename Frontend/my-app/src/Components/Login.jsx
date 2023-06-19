@@ -15,14 +15,15 @@ import { useDispatch } from "react-redux";
      const [passwordlogin,setpasswordlogin]=useState("")
      const dispatch = useDispatch()
       const navigate=useNavigate()
-     const handlesignup=()=>{
+     const handlesignup=(e)=>{
+        e.preventDefault()
         let obj={
             name,
             email,
             age:Number(age),
             password
         }
-        fetch("http://localhost:4500/users/register",{
+        fetch("https://aware-lime-caiman.cyclic.app/users/register",{
             method:"POST",
             headers:{
                 "Content-Type":"application/json"
@@ -32,9 +33,15 @@ import { useDispatch } from "react-redux";
             return res.json()
         }).then((data)=>{
             console.log(data)
+            alert("Signup Successful")
         }).catch((err)=>{
             console.log(err)
         })
+        setname("")
+        setemail("")
+        setage("")
+        setpassword("")
+        
      }
      const handlelogin=(e)=>{
         e.preventDefault()
@@ -42,7 +49,7 @@ import { useDispatch } from "react-redux";
            email:emaillogin,
            password:passwordlogin
         }
-        fetch("http://localhost:4500/users/login",{
+        fetch("https://aware-lime-caiman.cyclic.app/users/login",{
             method:"POST",
             headers:{
                 "Content-Type":"application/json"
@@ -54,11 +61,13 @@ import { useDispatch } from "react-redux";
             console.log(data.token)
             localStorage.setItem("token",JSON.stringify(data.token))
             navigate("/games")
-            alert("login success")
+            alert("login successful")
             dispatch({type: SHOW_SUCC})
         }).catch((err)=>{
             console.log(err)
         })
+        setemaillogin("")
+        setpasswordlogin("")
      }
       return(
           <Components.Container>

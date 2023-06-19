@@ -24,7 +24,7 @@ const Games = () => {
   const token = JSON.parse(localStorage.getItem("token"))
   let column = 5
   const getgames = () => {
-    fetch("http://localhost:4500/games", {
+    fetch("https://aware-lime-caiman.cyclic.app/games", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -46,7 +46,7 @@ const Games = () => {
   const handlecart=(el)=>{
     
     console.log(el)
-    fetch("http://localhost:4500/cart/add", {
+    fetch("https://aware-lime-caiman.cyclic.app/cart/add", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -60,6 +60,7 @@ const Games = () => {
       //setdata(data.cart)
       console.log(data)
       console.log("added cart")
+      alert("Product Added to the Cart")
     }).catch((err) => {
       console.log(err)
     })

@@ -1,17 +1,43 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
+import { REFRESH_SUCC } from "../../Redux/ProductReducer/actionTypes";
 
-const Card = ({
-  id,
-  name,
-  avatar,
-  genre,
-  price,
-  category,
-  type,
-  handleDelete,
-  handleEdit,
-}) => {
+
+const Card = ({ _id, id, name, avatar, genre, price, category, type }) => {
+  const [change, setchange] = useState(true)
+  const [hello,sethello]=useState(false)
+ 
+  const handleadmindelete = (id) => {
+    const admintoken = JSON.parse(localStorage.getItem("admintoken"))
+    //const token = JSON.parse(localStorage.getItem("token"))
+    //console.log(id)
+  
+    fetch(`https://aware-lime-caiman.cyclic.app/admingames/delete/${id}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${admintoken}`
+       
+
+      }
+    }).then((res) => {
+      return res.json()
+    }).then((data) => {
+      console.log(data)
+      
+      setchange(!change)
+    })
+    .catch((err) => {
+      console.log(err)
+    })
+  }
+  const handleadminpatch=( _id, id, name, avatar, genre, price, category, type)=>{
+         
+  }
+  useEffect(() => {
+    sethello(!hello)
+  }, [change])
   return (
     <DIV class="flex flex-row justify-between items-center bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40">
       <img className="img" src={avatar} alt="img-blur-shadow" />
@@ -28,17 +54,13 @@ const Card = ({
       </div>
       <div className="button">
         <button
-          onClick={() => {
-            handleDelete(id);
-          }}
+          onClick={() => handleadmindelete(_id)}
           className="del"
         >
           Delete
         </button>
         <button
-          onClick={() => {
-            handleEdit(id);
-          }}
+           onClick={() => handleadminpatch( _id, id, name, avatar, genre, price, category, type )}
           className="edit"
         >
           Edit
