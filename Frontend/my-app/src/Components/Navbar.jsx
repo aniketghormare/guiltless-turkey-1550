@@ -74,6 +74,10 @@ const Navbar = () => {
       <Link style={{textDecoration:"none",color:"tomato"}} to={"/bluray"}>Blu-ray</Link>
       <Link style={{textDecoration:"none",color:"tomato"}} to={"/dvd"}>DVD</Link>
       <Link style={{textDecoration:"none",color:"tomato"}} to={"/more"}>More Platforms</Link>
+     
+        <Link style={{textDecoration:"none",color:"tomato"}} to={"/Adminlogin"} >Admin</Link>
+      
+     
       </div>
       
       

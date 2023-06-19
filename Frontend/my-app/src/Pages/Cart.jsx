@@ -12,7 +12,7 @@ const Cart = () => {
     const dispatch = useDispatch()
     const [val,setval]=useState(1)
     const navigate=useNavigate()
-     //let [count,setcount]=useState(0)
+     let [count,setcount]=useState(0)
     const total=useSelector((store)=>{
         return store.ProductReducer.total
     })
@@ -22,7 +22,7 @@ const Cart = () => {
     //const [total,settotal]=useState(0)
     const getcart = () => {
        
-        fetch("http://localhost:4500/cart", {
+        fetch("https://aware-lime-caiman.cyclic.app/cart", {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -54,7 +54,7 @@ const Cart = () => {
     const cartremove= (el)=>{
         const {_id}=el
            console.log(el)
-         fetch(`http://localhost:4500/cart/remove/${_id}`,{
+         fetch(`https://aware-lime-caiman.cyclic.app/cart/remove/${_id}`,{
             method:"DELETE",
             headers:{
                 "Content-Type":"application/json",
@@ -70,13 +70,15 @@ const Cart = () => {
             console.log(err)
          })
     }
-
+    useEffect(()=>{
+        setcount(cartdata.length)
+    },[count])
     useEffect(() => {
         getcart()
-    }, [val,total,cartrem])
+    }, [val,total,cartrem,count])
     useEffect(()=>{
         carttotal()
-    },[val])
+    },[val,count])
   
    const handlepayment=()=>{
     navigate("/payment")
@@ -96,7 +98,7 @@ const Cart = () => {
                     <p style={{ marginLeft: "0px" }}>Shipping, Tax & Coupons are applied on the next page.</p>
                 </div>
                 <div style={{ height: "50px", width: "100%", border: "1px solid rgb(249,249,249)", display: "flex", alignItems: "center" }}>
-                    <h4>IN CART { }</h4>
+                    <h4>IN CART { count}</h4>
                 </div>
                 <hr />
                 <div className='cartcontainer'>

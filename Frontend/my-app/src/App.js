@@ -15,36 +15,76 @@ import { useSelector } from 'react-redux';
 import { MainRoutes } from './Pages/MainRoutes';
 import { BrowserRouter } from 'react-router-dom';
 import Footer from './Pages/Footer';
-
+import AdminNavbar from "./Pages/Admin/AdminNavbar"
+import Admin from "./Pages/Admin/Admin"
 
 
 function App() {
   const show = useSelector((store)=>{
     return store.ProductReducer.show
 })
-console.log(show);
+const admin = useSelector((store)=>{
+  return store.ProductReducer.admin
+})
+console.log(admin);
   return (
     <BrowserRouter>
     {
-      show ? 
-      <DIV className="App">
-        <video autoPlay loop muted>
-          <source src={bgImage} type='video/mp4'/>
-        </video>
-        <Header/>
-        <MiddlePart/>
-        <Collective/>
-  
-      </DIV> :
-       <DIV className="App">
-       <Navbar/>
-       <MainRoutes/>
-       <Footer/>
-       </DIV>
+      admin?<Admin/> :
       
-      
+      <div>
+      {
+        show ? 
+        <DIV className="App">
+          <video autoPlay loop muted>
+            <source src={bgImage} type='video/mp4'/>
+          </video>
+          <Header/>
+          <MiddlePart/>
+          <Collective/>
+    
+        </DIV> :
+         <DIV className="App">
+         <Navbar/>
+         <MainRoutes/>
+         <Footer/>
+         </DIV>
+        
+        
+      }
+      </div>
+     
+    
+
     }
-    </BrowserRouter>
+  
+  </BrowserRouter>
+    
+    
+    // <BrowserRouter>
+
+    // {
+    //   show ? 
+    //   <DIV className="App">
+    //     <video autoPlay loop muted>
+    //       <source src={bgImage} type='video/mp4'/>
+    //     </video>
+    //     <Header/>
+    //     <MiddlePart/>
+    //     <Collective/>
+  
+    //   </DIV> :
+    //    <DIV className="App">
+    //    <Navbar/>
+    //    <MainRoutes/>
+    //    <Footer/>
+    //    </DIV>
+      
+      
+    // }
+  
+    // {/* <Admin/> */}
+    // </BrowserRouter>
     
 
 

@@ -12,6 +12,9 @@ import Simple from './Singlepage'
 import Games from './Games'
 import Movies from "./Movies"
 import PaymentPage from './Payment'
+import Admin from './Admin/Admin'
+import BasicUsage from './Admin/Adminlogin'
+import Adminlogin from './Admin/Adminlogin'
 
 export const MainRoutes = () => {
   return <Routes>
@@ -21,6 +24,10 @@ export const MainRoutes = () => {
     <Route path='/movies' element={<Movies/>}/>
     <Route path='/cart' element={<Cart/>}/>
     <Route path="/payment" element={<PaymentPage/>}/>
+    <Route path="/adminlogin" element={<Adminlogin/>}/>
+    <Route path="/admin" element={<Admin/>}/>
+    
+
   </Routes>
 }
 
