@@ -15,6 +15,7 @@ import styled from "styled-components";
 import { color } from "framer-motion";
 
 const PaymentPage = () => {
+  const sum=JSON.parse(localStorage.getItem("total"))
   const navigate = useNavigate();
  // const [amount, setAmount] = useState(localStorage.getItem('amount'));
     const [name,setname]=useState("")
@@ -131,7 +132,7 @@ const PaymentPage = () => {
             </Text>
             <Flex justifyContent="space-between" mt={2}>
               <Text>Subtotal</Text>
-              <Text id="sub_total">₹{}</Text>
+              <Text id="sub_total">₹{+sum}</Text>
             </Flex>
             <Flex justifyContent="space-between" mt={2}>
 
@@ -144,7 +145,7 @@ const PaymentPage = () => {
                 Order Total
               </Text>
               <Text fontSize="lg" fontWeight="bold" id="Order_total">
-                ₹ {}
+                ₹ {+sum}
               </Text>
             </Flex>
             <Button onClick={handleorder} style={{height:"50px",backgroundColor:"rgb(255,75,43)",color:"white"}} mt={4} colorScheme="blue" >

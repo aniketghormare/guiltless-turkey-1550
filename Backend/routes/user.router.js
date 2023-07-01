@@ -12,7 +12,7 @@ userRouter.post("/register",async(req,res)=>{
     try {
         bcrypt.hash(password,5,async(err,hash)=>{
             if(err){
-                res.status(200).json({err:err.message})
+                res.status(200).json({err:err})
             }else{
                 const user=new UserModel({name,email,password:hash,age})
                 await user.save()
@@ -20,7 +20,7 @@ userRouter.post("/register",async(req,res)=>{
             }
         })
     } catch (error) {
-        res.status(400).json({error:error.message})
+        res.status(400).json({error:error})
     }
 })
 
@@ -42,7 +42,7 @@ userRouter.post("/login",async(req,res)=>{
         res.status(200).json({msg:"user not found"})
       }
     } catch (error) {
-        res.status(400).json({error:error.message})
+        res.status(400).json({error:error})
     }
 })
 

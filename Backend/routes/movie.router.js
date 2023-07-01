@@ -18,7 +18,7 @@ movieRouter.get("/",async(req,res)=>{
         res.status(200).json({movie})
         
     } catch (error) {
-        res.status(400).json({err:err.message})
+        res.status(400).json({err:err})
     }
     
 })
@@ -32,7 +32,7 @@ movieRouter.get("/page/:pagenum",async(req,res)=>{
         const movie=await MovieModel.find({}).skip((pagenum-1)*Page_Size).limit(Page_Size)
         res.status(200).json({movie})
     } catch (error) {
-        res.status(400).json({error:error.message})
+        res.status(400).json({error:error})
     }
 })
 

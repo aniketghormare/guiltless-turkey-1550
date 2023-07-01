@@ -48,6 +48,7 @@ const Cart = () => {
           total+= Number(cartdata[i].price * val)
         }
         console.log(total)
+        localStorage.setItem("total",JSON.stringify(total))
         dispatch({type:TOTAL_SUCC,payload:total})
       }
   

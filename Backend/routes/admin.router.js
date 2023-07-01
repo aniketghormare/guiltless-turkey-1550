@@ -20,7 +20,7 @@ adminRouter.post("/register",async(req,res)=>{
             }
         })
     } catch (error) {
-        res.status(400).json({error:error.message})
+        res.status(400).json({error:error})
     }
 })
 
@@ -42,7 +42,7 @@ adminRouter.post("/login",async(req,res)=>{
         res.status(200).json({msg:"admin not found"})
       }
     } catch (error) {
-        res.status(400).json({error:error.message})
+        res.status(400).json({error:error})
     }
 })
 

@@ -12,9 +12,10 @@ import Simple from './Singlepage'
 import Games from './Games'
 import Movies from "./Movies"
 import PaymentPage from './Payment'
-import Admin from './Admin/Admin'
+// import Admin from './Admin/Admin'
 import BasicUsage from './Admin/Adminlogin'
 import Adminlogin from './Admin/Adminlogin'
+import Admin from './Admin/admin'
 
 export const MainRoutes = () => {
   return <Routes>

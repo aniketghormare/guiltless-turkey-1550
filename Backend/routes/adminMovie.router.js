@@ -16,7 +16,7 @@ adminMovieRouter.post("/add",async(req,res)=>{
         await movie.save()
         res.status(200).json({msg:"Movie has been added", movie:req.body})
     }catch(err){
-        res.status(400).json({err:err.message})
+        res.status(400).json({err:err})
     }
 })
 
@@ -27,7 +27,7 @@ adminMovieRouter.get("/",async(req,res)=>{
         res.status(200).json({movie})
         
     } catch (error) {
-        res.status(400).json({err:err.message})
+        res.status(400).json({err:err})
     }
     
 })
@@ -47,7 +47,7 @@ adminMovieRouter.patch("/update/:movieID",async(req,res)=>{
         }
         
     } catch (error) {
-        res.status(400).json({error:error.message})
+        res.status(400).json({error:error})
     }
     
     
@@ -68,7 +68,7 @@ adminMovieRouter.delete("/delete/:movieID",async(req,res)=>{
         }
         
     } catch (error) {
-        res.status(400).json({error:error.message})
+        res.status(400).json({error:error})
     }
 })
 
@@ -79,7 +79,7 @@ adminMovieRouter.get("/page/:pagenum",async(req,res)=>{
         const movie=await MovieModel.find({}).skip((pagenum-1)*Page_Size).limit(Page_Size)
         res.status(200).json({movie})
     } catch (error) {
-        res.status(400).json({error:error.message})
+        res.status(400).json({error:error})
     }
 })
 

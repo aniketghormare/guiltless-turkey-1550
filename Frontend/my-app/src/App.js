@@ -16,7 +16,8 @@ import { MainRoutes } from './Pages/MainRoutes';
 import { BrowserRouter } from 'react-router-dom';
 import Footer from './Pages/Footer';
 import AdminNavbar from "./Pages/Admin/AdminNavbar"
-import Admin from "./Pages/Admin/Admin"
+import Admin from './Pages/Admin/admin';
+// import Admin from "./Pages/Admin/Admin"
 
 
 function App() {

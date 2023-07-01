@@ -15,17 +15,20 @@ adminGameRouter.post("/add",async(req,res)=>{
         await game.save()
         res.status(200).json({msg:"Game has been added", game:req.body})
     }catch(err){
-        res.status(400).json({err:err.message})
+        res.status(400).json({err:err})
     }
 })
 
 adminGameRouter.get("/",async(req,res)=>{
     try {
         const game= await GameModel.find()
+        console.log(game)
         res.status(200).json({game})
         
     } catch (error) {
-        res.status(400).json({err:err.message})
+        console.log("error")
+        res.status(400).json({err:err})
+        
     }
     
 })
@@ -45,7 +48,7 @@ adminGameRouter.patch("/update/:gameID",async(req,res)=>{
         }
         
     } catch (error) {
-        res.status(400).json({error:error.message})
+        res.status(400).json({error:error})
     }
     
     
@@ -66,7 +69,7 @@ adminGameRouter.delete("/delete/:gameID",async(req,res)=>{
         }
         
     } catch (error) {
-        res.status(400).json({error:error.message})
+        res.status(400).json({error:error})
     }
 })
 
@@ -78,7 +81,7 @@ adminGameRouter.get("/page/:pagenum",async(req,res)=>{
         const game=await GameModel.find({}).skip((pagenum-1)*Page_Size).limit(Page_Size)
         res.status(200).json({game})
     } catch (error) {
-        res.status(400).json({error:error.message})
+        res.status(400).json({error:error})
     }
 })
 
