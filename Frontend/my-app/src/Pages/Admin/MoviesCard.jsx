@@ -13,7 +13,7 @@ const Card = ({ _id, id, name, avatar, genre, price, category, type }) => {
     //const token = JSON.parse(localStorage.getItem("token"))
     //console.log(id)
   
-    fetch(`https://aware-lime-caiman.cyclic.app/admingames/delete/${id}`, {
+    fetch(`https://gamezy-borsejugal23.onrender.com/admingames/delete/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",

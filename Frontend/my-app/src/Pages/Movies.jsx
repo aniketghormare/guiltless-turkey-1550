@@ -22,7 +22,7 @@ const Movies = () => {
   const token =  JSON.parse(localStorage.getItem("token"))
   let column = 5
   const getgames = () => {
-    fetch("https://aware-lime-caiman.cyclic.app/movies", {
+    fetch("https://gamezy-borsejugal23.onrender.com/movies", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -33,7 +33,7 @@ const Movies = () => {
     }).then((data) => {
       dispatch({type:MOVIES_SUCC,payload:data.movie})
       setdata(data.movie)
-      console.log(data)
+      // console.log(data)
     }).catch((err) => {
       console.log(err)
     })
@@ -43,8 +43,8 @@ const Movies = () => {
   }, [])
   const handlecart=(el)=>{
     
-    console.log(el)
-    fetch("https://aware-lime-caiman.cyclic.app/cart/add", {
+    // alert(console.log(el))
+    fetch("https://gamezy-borsejugal23.onrender.com/cart/add", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -63,7 +63,7 @@ const Movies = () => {
       console.log(err)
     })
   }
-  console.log(data)
+  // console.log(data)
   return (
     <Div>
       <h1>Movies</h1>
@@ -86,7 +86,7 @@ const Movies = () => {
             {
               <Carousel1 cols={column} rows={1} loop>
                 {
-                  moviedata.map((el, index) => {
+                  moviedata?.map((el, index) => {
                     return (
                       <Carousel1.Item style={{ height: "100%", width: "200px" }}>
                         <img width="80%"alt="img"  height="260px" src={el.Poster} />
@@ -95,7 +95,7 @@ const Movies = () => {
                         <div style={{ display: "flex", height: "auto", width: "80%", border: "1px solid rgb(249,249,249)", margin: "auto" }}>
                           <button onClick={()=>handlecart(el)} style={{ display: "flex", width: "100%", margin: "auto", borderRadius: "5px", justifyContent: "space-between", backgroundColor: "rgb(255,75,43)",borderColor:"rgb(255,75,43)", color: "white" }}>
                             <h4>See More</h4>
-                            <h4>${el.price}</h4>
+                            <h4>$ {Number(25)}</h4>
                           </button>
                         </div>
 
@@ -124,16 +124,16 @@ const Movies = () => {
             {
               <Carousel1 cols={column} rows={1} loop>
                 {
-                  moviedata.map((el, index) => {
+                  moviedata?.map((el, index) => {
                     return (
-                      <Carousel1.Item style={{ height: "100%", width: "200px" }}>
+                      <Carousel1.Item style={{ height: "100%", width: "200px" }} key={el.id}>
                         <img width="80%"alt="img"  height="260px" src={el.Poster} />
                         <h4>{el.Title.substring(0,70)}</h4>
                         <p>{el.Year}</p>
                         <div style={{ display: "flex", height: "auto", width: "80%", border: "1px solid rgb(249,249,249)", margin: "auto" }}>
-                          <button style={{ display: "flex", width: "100%", margin: "auto", borderRadius: "5px", justifyContent: "space-between", backgroundColor: "rgb(255,75,43)",borderColor:"rgb(255,75,43)", color: "white" }}>
+                          <button onClick={()=>handlecart(el)} style={{ display: "flex", width: "100%", margin: "auto", borderRadius: "5px", justifyContent: "space-between", backgroundColor: "rgb(255,75,43)",borderColor:"rgb(255,75,43)", color: "white" }}>
                             <h4>See More</h4>
-                            <h4>${el.price}</h4>
+                            <h4>$ {Number(25)}</h4>
                           </button>
                         </div>
 
@@ -162,16 +162,16 @@ const Movies = () => {
             {
               <Carousel1 cols={column} rows={1} loop>
                 {
-                  moviedata.map((el, index) => {
+                  moviedata?.map((el, index) => {
                     return (
-                      <Carousel1.Item style={{ height: "100%", width: "200px" }}>
+                      <Carousel1.Item  key={el.id}style={{ height: "100%", width: "200px" }}>
                         <img width="80%"alt="img" height="260px" src={el.Poster} />
                         <h4>{el.Title.substring(0,70)}</h4>
                         <p>{el.Year}</p>
                         <div style={{ display: "flex", height: "auto", width: "80%", border: "1px solid rgb(249,249,249)", margin: "auto" }}>
-                          <button style={{ display: "flex", width: "100%", margin: "auto", borderRadius: "5px", justifyContent: "space-between",  backgroundColor: "rgb(255,75,43)",borderColor:"rgb(255,75,43)", color: "white" }}>
+                          <button onClick={()=>handlecart(el)} style={{ display: "flex", width: "100%", margin: "auto", borderRadius: "5px", justifyContent: "space-between",  backgroundColor: "rgb(255,75,43)",borderColor:"rgb(255,75,43)", color: "white" }}>
                             <h4>See More</h4>
-                            <h4>${el.price}</h4>
+                            <h4>$ {Number(25)}</h4>
                           </button>
                         </div>
 
@@ -202,16 +202,16 @@ const Movies = () => {
             {
               <Carousel1 cols={column} rows={1} loop>
                 {
-                  moviedata.map((el, index) => {
+                  moviedata?.map((el, index) => {
                     return (
-                      <Carousel1.Item style={{ height: "100%", width: "200px" }}>
+                      <Carousel1.Item key={el.id}style={{ height: "100%", width: "200px" }}>
                         <img width="80%"alt="img"  height="260px" src={el.Poster} />
                         <h4>{el.Title.substring(0,70)}</h4>
                         <p>{el.Year}</p>
                         <div style={{ display: "flex", height: "auto", width: "80%", border: "1px solid rgb(249,249,249)", margin: "auto" }}>
-                          <button style={{ display: "flex", width: "100%", margin: "auto", borderRadius: "5px", justifyContent: "space-between", backgroundColor: "rgb(255,75,43)",borderColor:"rgb(255,75,43)", color: "white" }}>
+                          <button onClick={()=>handlecart(el)}style={{ display: "flex", width: "100%", margin: "auto", borderRadius: "5px", justifyContent: "space-between", backgroundColor: "rgb(255,75,43)",borderColor:"rgb(255,75,43)", color: "white" }}>
                             <h4>See More</h4>
-                            <h4>${el.price}</h4>
+                            <h4>$ {Number(25)}</h4>
                           </button>
                         </div>
 

@@ -22,9 +22,10 @@ const Games = () => {
 
 
   const token = JSON.parse(localStorage.getItem("token"))
+  console.log(token)
   let column = 5
   const getgames = () => {
-    fetch("https://aware-lime-caiman.cyclic.app/games", {
+    fetch("https://gamezy-borsejugal23.onrender.com/games/", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -46,7 +47,7 @@ const Games = () => {
   const handlecart=(el)=>{
     
     console.log(el)
-    fetch("https://aware-lime-caiman.cyclic.app/cart/add", {
+    fetch("https://gamezy-borsejugal23.onrender.com/cart/add", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -89,9 +90,9 @@ const Games = () => {
             {
               <Carousel1 cols={column} rows={1} loop>
                 {
-                  gamedata.map((el, index) => {
+                  gamedata?.map((el, index) => {
                     return (
-                      <Carousel1.Item style={{ height: "100%", width: "200px" }}>
+                      <Carousel1.Item key={el.id}style={{ height: "100%", width: "200px" }}>
                         <img width="80%"alt="img"  height="260px" src={el.avatar} />
                         <h4>{el.name.substring(0,70)}</h4>
                         <p>{el.genre}</p>
@@ -127,14 +128,14 @@ const Games = () => {
             {
               <Carousel1 cols={column} rows={1} loop>
                 {
-                  gamedata.map((el, index) => {
+                  gamedata?.map((el, index) => {
                     return (
-                      <Carousel1.Item style={{ height: "100%", width: "200px" }}>
+                      <Carousel1.Item key={el.id}style={{ height: "100%", width: "200px" }}>
                         <img width="80%"alt="img"  height="260px" src={el.avatar} />
                         <h4>{el.name.substring(0,70)}</h4>
                         <p>{el.genre}</p>
                         <div style={{ display: "flex", height: "auto", width: "80%", border: "1px solid rgb(249,249,249)", margin: "auto" }}>
-                          <button style={{ display: "flex", width: "100%", margin: "auto", borderRadius: "5px", justifyContent: "space-between",  backgroundColor: "rgb(255,75,43)",borderColor:"rgb(255,75,43)", color: "white" }}>
+                          <button onClick={()=>handlecart(el)} style={{ display: "flex", width: "100%", margin: "auto", borderRadius: "5px", justifyContent: "space-between",  backgroundColor: "rgb(255,75,43)",borderColor:"rgb(255,75,43)", color: "white" }}>
                             <h4>See More</h4>
                             <h4>${el.price}</h4>
                           </button>
@@ -165,14 +166,14 @@ const Games = () => {
             {
               <Carousel1 cols={column} rows={1} loop>
                 {
-                  gamedata.map((el, index) => {
+                  gamedata?.map((el, index) => {
                     return (
-                      <Carousel1.Item style={{ height: "100%", width: "200px" }}>
+                      <Carousel1.Item key={el.id}style={{ height: "100%", width: "200px" }}>
                         <img width="80%"alt="img"  height="260px" src={el.avatar} />
                         <h4>{el.name.substring(0,70)}</h4>
                         <p>{el.genre}</p>
                         <div style={{ display: "flex", height: "auto", width: "80%", border: "1px solid rgb(249,249,249)", margin: "auto" }}>
-                          <button style={{ display: "flex", width: "100%", margin: "auto", borderRadius: "5px", justifyContent: "space-between",  backgroundColor: "rgb(255,75,43)",borderColor:"rgb(255,75,43)", color: "white" }}>
+                          <button  onClick={()=>handlecart(el)} style={{ display: "flex", width: "100%", margin: "auto", borderRadius: "5px", justifyContent: "space-between",  backgroundColor: "rgb(255,75,43)",borderColor:"rgb(255,75,43)", color: "white" }}>
                             <h4>See More</h4>
                             <h4>${el.price}</h4>
                           </button>
@@ -205,14 +206,14 @@ const Games = () => {
             {
               <Carousel1 cols={column} rows={1} loop>
                 {
-                  gamedata.map((el, index) => {
+                  gamedata?.map((el, index) => {
                     return (
-                      <Carousel1.Item style={{ height: "100%", width: "200px" }}>
+                      <Carousel1.Item key={el.id} style={{ height: "100%", width: "200px" }}>
                         <img width="80%"alt="img"  height="260px" src={el.avatar} />
                         <h4>{el.name.substring(0,70)}</h4>
                         <p>{el.genre}</p>
                         <div style={{ display: "flex", height: "auto", width: "80%", border: "1px solid rgb(249,249,249)", margin: "auto" }}>
-                          <button style={{ display: "flex", width: "100%", margin: "auto", borderRadius: "5px", justifyContent: "space-between",  backgroundColor: "rgb(255,75,43)",borderColor:"rgb(255,75,43)", color: "white" }}>
+                          <button onClick={()=>handlecart(el)} style={{ display: "flex", width: "100%", margin: "auto", borderRadius: "5px", justifyContent: "space-between",  backgroundColor: "rgb(255,75,43)",borderColor:"rgb(255,75,43)", color: "white" }}>
                             <h4>See More</h4>
                             <h4>${el.price}</h4>
                           </button>
