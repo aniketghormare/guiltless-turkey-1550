@@ -11,7 +11,7 @@ const Adminlogin = () => {
             email,
             password
         }
-        fetch("https://aware-lime-caiman.cyclic.app/admins/login",{
+        fetch("https://gamezy-borsejugal23.onrender.com/admins/login",{
             method:"POST",
             headers:{
                 "Content-Type":"application/json"

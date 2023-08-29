@@ -22,7 +22,7 @@ import {
 export const getMovies = (query) => (dispatch) => {
   dispatch({ type: GET_REQUEST_MOVIE });
   axios
-    .get("http://localhost:8080/movie", query)
+    .get("https://gamezy-borsejugal23.onrender.com/movies", query)
     .then((res) => {
       console.log(res.data);
       dispatch({ type: GET_SUCCESS_MOVIE, payload: res.data });

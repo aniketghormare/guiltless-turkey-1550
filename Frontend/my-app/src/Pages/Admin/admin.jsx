@@ -10,7 +10,7 @@ const Admin = () => {
   const [data, setdata] = useState([])
  const [count,setcount]=useState(0)
   const getdata = () => {
-    fetch("https://aware-lime-caiman.cyclic.app/admingames", {
+    fetch("https://gamezy-borsejugal23.onrender.com/admingames", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

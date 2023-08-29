@@ -22,7 +22,7 @@ const Cart = () => {
     //const [total,settotal]=useState(0)
     const getcart = () => {
        
-        fetch("https://aware-lime-caiman.cyclic.app/cart", {
+        fetch("https://gamezy-borsejugal23.onrender.com/cart", {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -32,11 +32,12 @@ const Cart = () => {
         }).then((res) => {
             return res.json()
         }).then((data) => {
-            console.log(data.msg)
+            setcount(data.msg.length)
+            // setcount(data)
             dispatch({ type: CART_SUCC, payload: data.msg })
            
         }).catch((err) => {
-            console.log(err)
+            //console.log(err)
         })
     }
     const handlechnage=(val)=>{
@@ -45,17 +46,22 @@ const Cart = () => {
       const carttotal=()=>{
         let total=0
         for(let i=0;i<=cartdata.length-1;i++){
-          total+= Number(cartdata[i].price * val)
+            if (cartdata[i].price){
+
+                total+= Number(cartdata[i].price * val)
+            }else{
+                total+=25
+            }
         }
-        console.log(total)
+        //console.log(total)
         localStorage.setItem("total",JSON.stringify(total))
         dispatch({type:TOTAL_SUCC,payload:total})
       }
   
     const cartremove= (el)=>{
         const {_id}=el
-           console.log(el)
-         fetch(`https://aware-lime-caiman.cyclic.app/cart/remove/${_id}`,{
+           //console.log(el)
+         fetch(`https://gamezy-borsejugal23.onrender.com/cart/remove/${_id}`,{
             method:"DELETE",
             headers:{
                 "Content-Type":"application/json",
@@ -64,28 +70,29 @@ const Cart = () => {
          }).then((res)=>{
             return res.json()
          }).then((data)=>{
-            console.log(data)
+            //console.log(data)
             setcartremove(!cartrem)
-            console.log("eleemet removed")
+            getcart()
+            //console.log("eleemet removed")
          }).catch((err)=>{
-            console.log(err)
+            //console.log(err)
          })
     }
-    useEffect(()=>{
-        setcount(cartdata.length)
-    },[count])
+    // useEffect(()=>{
+    //     setcount(cartdata.length)
+    // },[count])
     useEffect(() => {
         getcart()
     }, [val,total,cartrem,count])
     useEffect(()=>{
         carttotal()
-    },[val,count])
+    },[val])
   
    const handlepayment=()=>{
     navigate("/payment")
    }
     
-    console.log(cartdata)
+    console.log(count)
     
    
     return (
@@ -99,7 +106,7 @@ const Cart = () => {
                     <p style={{ marginLeft: "0px" }}>Shipping, Tax & Coupons are applied on the next page.</p>
                 </div>
                 <div style={{ height: "50px", width: "100%", border: "1px solid rgb(249,249,249)", display: "flex", alignItems: "center" }}>
-                    <h4>IN CART { count}</h4>
+                    <h4>IN CART { count} ITEM</h4>
                 </div>
                 <hr />
                 <div className='cartcontainer'>
@@ -121,7 +128,7 @@ const Cart = () => {
                                            el.category? <h4>{el.category}</h4>:<h4>{el.Title}</h4>
                                         }
                                         
-                                        <p>${el.price}</p>
+                                        <p>${el.price || 25}</p>
                                         <p>Estimated dilivery 2 days</p>
                                         <select name="" id=""   onChange={(e)=>handlechnage(e.target.value)}>
                                             <option value="1">1</option>

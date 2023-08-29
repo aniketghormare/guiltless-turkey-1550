@@ -15,6 +15,7 @@ import { useDispatch } from "react-redux";
      const [passwordlogin,setpasswordlogin]=useState("")
      const dispatch = useDispatch()
       const navigate=useNavigate()
+
      const handlesignup=(e)=>{
         e.preventDefault()
         let obj={
@@ -23,7 +24,7 @@ import { useDispatch } from "react-redux";
             age:Number(age),
             password
         }
-        fetch("https://aware-lime-caiman.cyclic.app/users/register",{
+        fetch("https://gamezy-borsejugal23.onrender.com/users/register",{
             method:"POST",
             headers:{
                 "Content-Type":"application/json"
@@ -43,32 +44,44 @@ import { useDispatch } from "react-redux";
         setpassword("")
         
      }
-     const handlelogin=(e)=>{
-        e.preventDefault()
-        let obj={
-           email:emaillogin,
-           password:passwordlogin
+     const handlelogin = async (e) => {
+        e.preventDefault();
+    
+        try {
+            const obj = {
+                email: emaillogin,
+                password: passwordlogin
+            };
+    
+            const response = await fetch("https://gamezy-borsejugal23.onrender.com/users/login", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(obj)
+            });
+    
+            const data = await response.json();
+            console.log(data.token);
+    
+            localStorage.setItem("token", JSON.stringify(data.token));
+            
+            // Assuming the API responds with a property named 'success' indicating success
+            if (data.token) {
+                alert("Login successful");
+                navigate("/games");
+            }else{
+                alert("Login failed");
+                
+            }
+        } catch (err) {
+            console.log(err);
         }
-        fetch("https://aware-lime-caiman.cyclic.app/users/login",{
-            method:"POST",
-            headers:{
-                "Content-Type":"application/json"
-            },
-            body:JSON.stringify(obj)
-        }).then((res)=>{
-            return res.json()
-        }).then((data)=>{
-            console.log(data.token)
-            localStorage.setItem("token",JSON.stringify(data.token))
-            navigate("/games")
-            alert("login successful")
-            dispatch({type: SHOW_SUCC})
-        }).catch((err)=>{
-            console.log(err)
-        })
-        setemaillogin("")
-        setpasswordlogin("")
-     }
+        
+        setemaillogin("");
+        setpasswordlogin("");
+    };
+    
       return(
           <div style={{width:"50%" ,margin:"auto",marginTop:"50px"}}>
             <Components.Container>
