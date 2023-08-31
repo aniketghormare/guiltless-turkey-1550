@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import Carousel from 'react-elastic-carousel';
-//import data from "../db"
 import Carousel1 from 'better-react-carousel'
 import { useDispatch, useSelector } from "react-redux"
 import { setcart } from '../Redux/ProductReducer/action';
@@ -97,7 +96,7 @@ const Games = () => {
                         <h4>{el.name.substring(0,70)}</h4>
                         <p>{el.genre}</p>
                         <div style={{ display: "flex", height: "auto", width: "80%", border: "1px solid rgb(249,249,249)", margin: "auto" }}>
-                          <button onClick={()=>handlecart(el)} style={{ display: "flex", width: "100%", margin: "auto", borderRadius: "5px", justifyContent: "space-between", backgroundColor: "rgb(255,75,43)",borderColor:"rgb(255,75,43)", color: "white" }}>
+                          <button onClick={()=>handlecart(el)} style={{ display: "flex", width: "100%", margin: "auto", borderRadius: "5px", justifyContent: "space-between", backgroundColor: "rgb(255,75,43)",borderColor:"rgb(255,75,43)", color: "white",cursor:"pointer" }}>
                             <h4>See More</h4>
                             <h4>${el.price}</h4>
                           </button>
@@ -135,7 +134,7 @@ const Games = () => {
                         <h4>{el.name.substring(0,70)}</h4>
                         <p>{el.genre}</p>
                         <div style={{ display: "flex", height: "auto", width: "80%", border: "1px solid rgb(249,249,249)", margin: "auto" }}>
-                          <button onClick={()=>handlecart(el)} style={{ display: "flex", width: "100%", margin: "auto", borderRadius: "5px", justifyContent: "space-between",  backgroundColor: "rgb(255,75,43)",borderColor:"rgb(255,75,43)", color: "white" }}>
+                          <button onClick={()=>handlecart(el)} style={{ display: "flex", width: "100%", margin: "auto", borderRadius: "5px", justifyContent: "space-between",  backgroundColor: "rgb(255,75,43)",borderColor:"rgb(255,75,43)", color: "white",cursor:"pointer" }}>
                             <h4>See More</h4>
                             <h4>${el.price}</h4>
                           </button>
@@ -173,7 +172,7 @@ const Games = () => {
                         <h4>{el.name.substring(0,70)}</h4>
                         <p>{el.genre}</p>
                         <div style={{ display: "flex", height: "auto", width: "80%", border: "1px solid rgb(249,249,249)", margin: "auto" }}>
-                          <button  onClick={()=>handlecart(el)} style={{ display: "flex", width: "100%", margin: "auto", borderRadius: "5px", justifyContent: "space-between",  backgroundColor: "rgb(255,75,43)",borderColor:"rgb(255,75,43)", color: "white" }}>
+                          <button  onClick={()=>handlecart(el)} style={{ display: "flex", width: "100%", margin: "auto", borderRadius: "5px", justifyContent: "space-between",  backgroundColor: "rgb(255,75,43)",borderColor:"rgb(255,75,43)", color: "white" ,cursor:"pointer"}}>
                             <h4>See More</h4>
                             <h4>${el.price}</h4>
                           </button>
@@ -213,7 +212,7 @@ const Games = () => {
                         <h4>{el.name.substring(0,70)}</h4>
                         <p>{el.genre}</p>
                         <div style={{ display: "flex", height: "auto", width: "80%", border: "1px solid rgb(249,249,249)", margin: "auto" }}>
-                          <button onClick={()=>handlecart(el)} style={{ display: "flex", width: "100%", margin: "auto", borderRadius: "5px", justifyContent: "space-between",  backgroundColor: "rgb(255,75,43)",borderColor:"rgb(255,75,43)", color: "white" }}>
+                          <button onClick={()=>handlecart(el)} style={{ display: "flex", width: "100%", margin: "auto", borderRadius: "5px", justifyContent: "space-between",  backgroundColor: "rgb(255,75,43)",borderColor:"rgb(255,75,43)", color: "white" ,cursor:"pointer"}}>
                             <h4>See More</h4>
                             <h4>${el.price}</h4>
                           </button>

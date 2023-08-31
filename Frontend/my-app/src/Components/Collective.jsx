@@ -41,7 +41,9 @@ export const Collective = () => {
         </div>
         </div>
             <div className='spl' style={{marginTop:"40px",paddingRight:"120px"}}>
-                <span>RENT THOUSANDS OF GAMES & MOVIES <button>Start Free Trial</button> NO LATE FEES.  CANCEL ANYTIME.</span>
+                <span>RENT THOUSANDS OF GAMES & MOVIES NO LATE FEES.  CANCEL ANYTIME.</span>
+                <br /><br />
+                <button style={{marginLeft:"200px"}}>Start Free Trial</button>
             </div>
             <div>
                 <h4>Video Game Rentals & Used Video Games | GameFly</h4>

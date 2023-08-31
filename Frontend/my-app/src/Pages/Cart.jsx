@@ -100,7 +100,7 @@ const Cart = () => {
             <div className='container'>
                 <div className='total'>
                     <h3>Subtotal:${total}</h3>
-                    <button onClick={handlepayment} className='btn'>CHECKOUT</button>
+                    <button onClick={handlepayment} className='btn' style={{cursor:"pointer"}}>CHECKOUT</button>
                 </div>
                 <div>
                     <p style={{ marginLeft: "0px" }}>Shipping, Tax & Coupons are applied on the next page.</p>
@@ -137,7 +137,7 @@ const Cart = () => {
                                             <option value="4">4</option>
                                             <option value="5">5</option>
                                         </select>
-                                        <button onClick={()=>cartremove(el)} style={{ backgroundColor: "rgb(249,249,249)", borderColor: "white", color: "rgb(191,87,32)", border: "none" }}>Remove</button>
+                                        <button onClick={()=>cartremove(el)} style={{ backgroundColor: "rgb(249,249,249)", borderColor: "white", color: "rgb(191,87,32)", border: "none" ,cursor:"pointer"}}>Remove</button>
                                     </div>
                                     
                                 </div>

@@ -11,6 +11,7 @@ export const MiddlePart = () => {
     }
   return (
     <DIV>
+        <br />
         <h1>Rent Thousands of Games & Movies</h1>
         <h2>NO LATE FEES. CANCEL ANYTIME.</h2>
         <div>

@@ -66,7 +66,7 @@ const Movies = () => {
   // console.log(data)
   return (
     <Div>
-      <h1>Movies</h1>
+      {/* <h1>Movies</h1> */}
       <div className='cordiv'>
         <Carousel className='carousel' breakPoints={items} style={{ backgroundColor: "rgb(249,249,249" }}>
           {items.map(item => <div className='initdiccorosal' key={item.id}>
@@ -93,7 +93,7 @@ const Movies = () => {
                         <h4>{el.Title.substring(0,70)}</h4>
                         <p>{el.Year}</p>
                         <div style={{ display: "flex", height: "auto", width: "80%", border: "1px solid rgb(249,249,249)", margin: "auto" }}>
-                          <button onClick={()=>handlecart(el)} style={{ display: "flex", width: "100%", margin: "auto", borderRadius: "5px", justifyContent: "space-between", backgroundColor: "rgb(255,75,43)",borderColor:"rgb(255,75,43)", color: "white" }}>
+                          <button onClick={()=>handlecart(el)} style={{ display: "flex", width: "100%", margin: "auto", borderRadius: "5px", justifyContent: "space-between", backgroundColor: "rgb(255,75,43)",borderColor:"rgb(255,75,43)", color: "white",cursor:"pointer" }}>
                             <h4>See More</h4>
                             <h4>$ {Number(25)}</h4>
                           </button>
@@ -131,7 +131,7 @@ const Movies = () => {
                         <h4>{el.Title.substring(0,70)}</h4>
                         <p>{el.Year}</p>
                         <div style={{ display: "flex", height: "auto", width: "80%", border: "1px solid rgb(249,249,249)", margin: "auto" }}>
-                          <button onClick={()=>handlecart(el)} style={{ display: "flex", width: "100%", margin: "auto", borderRadius: "5px", justifyContent: "space-between", backgroundColor: "rgb(255,75,43)",borderColor:"rgb(255,75,43)", color: "white" }}>
+                          <button onClick={()=>handlecart(el)} style={{ display: "flex", width: "100%", margin: "auto", borderRadius: "5px", justifyContent: "space-between", backgroundColor: "rgb(255,75,43)",borderColor:"rgb(255,75,43)", color: "white",cursor:"pointer" }}>
                             <h4>See More</h4>
                             <h4>$ {Number(25)}</h4>
                           </button>
@@ -169,7 +169,7 @@ const Movies = () => {
                         <h4>{el.Title.substring(0,70)}</h4>
                         <p>{el.Year}</p>
                         <div style={{ display: "flex", height: "auto", width: "80%", border: "1px solid rgb(249,249,249)", margin: "auto" }}>
-                          <button onClick={()=>handlecart(el)} style={{ display: "flex", width: "100%", margin: "auto", borderRadius: "5px", justifyContent: "space-between",  backgroundColor: "rgb(255,75,43)",borderColor:"rgb(255,75,43)", color: "white" }}>
+                          <button onClick={()=>handlecart(el)} style={{ display: "flex", width: "100%", margin: "auto", borderRadius: "5px", justifyContent: "space-between",  backgroundColor: "rgb(255,75,43)",borderColor:"rgb(255,75,43)", color: "white",cursor:"pointer" }}>
                             <h4>See More</h4>
                             <h4>$ {Number(25)}</h4>
                           </button>
@@ -209,7 +209,7 @@ const Movies = () => {
                         <h4>{el.Title.substring(0,70)}</h4>
                         <p>{el.Year}</p>
                         <div style={{ display: "flex", height: "auto", width: "80%", border: "1px solid rgb(249,249,249)", margin: "auto" }}>
-                          <button onClick={()=>handlecart(el)}style={{ display: "flex", width: "100%", margin: "auto", borderRadius: "5px", justifyContent: "space-between", backgroundColor: "rgb(255,75,43)",borderColor:"rgb(255,75,43)", color: "white" }}>
+                          <button onClick={()=>handlecart(el)}style={{ display: "flex", width: "100%", margin: "auto", borderRadius: "5px", justifyContent: "space-between", backgroundColor: "rgb(255,75,43)",borderColor:"rgb(255,75,43)", color: "white" ,cursor:"pointer"}}>
                             <h4>See More</h4>
                             <h4>$ {Number(25)}</h4>
                           </button>
