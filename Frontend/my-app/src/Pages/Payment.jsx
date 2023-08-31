@@ -148,7 +148,7 @@ const PaymentPage = () => {
                 ₹ {+sum}
               </Text>
             </Flex>
-            <Button onClick={handleorder} style={{height:"50px",backgroundColor:"rgb(255,75,43)",color:"white"}} mt={4} colorScheme="blue" >
+            <Button onClick={handleorder} style={{height:"50px",backgroundColor:"rgb(230,75,43)",color:"white"}} mt={4} colorScheme="blue"border={"none"} cursor={"pointer"} fontSize={"large"}>
               Place order
             </Button>
           </Box>

@@ -34,11 +34,14 @@ app.use("/games", gameRouter)
 app.use("/movies", movieRouter)
 app.use("/cart",cartRouter)
 
-app.listen(process.env.port,async()=>{
+let port=process.env.port||5000
+
+// console.log(port)
+app.listen(port,async()=>{
 try {
     await connect
     console.log("Now DB is connected")
-    console.log(`Server is running at port ${process.env.port}`)
+    console.log(`Server is running at port ${port}`)
 } catch (error) {
     console.log(error.message)
 }

@@ -80,7 +80,7 @@ const Navbar = () => {
      
       </div>
       
-      
+      {/* <br /><br /><br /> */}
 
     </DIV>
   )
@@ -89,7 +89,10 @@ const Navbar = () => {
 export default Navbar
 
 const DIV = styled.div`
-
+position: fixed;
+z-index: 100;
+background-color: white;
+/* border: 2px solid red; */
   .logo{
     width: 200px;
     height: 55px;

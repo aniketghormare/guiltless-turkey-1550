@@ -15,7 +15,9 @@ gameRouter.get("/",async(req,res)=>{
  
     try {
         const game= await GameModel.find()
-        res.status(200).json({game})
+        console.log(game)
+        res.status(200).send(game)
+
         
     } catch (error) {
         res.status(400).json({err:error})

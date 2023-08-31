@@ -47,6 +47,12 @@ console.log(admin);
         </DIV> :
          <DIV className="App">
          <Navbar/>
+         <br/>
+         <br/>
+         <br/>         <br/>
+         <br/>
+
+
          <MainRoutes/>
          <Footer/>
          </DIV>
