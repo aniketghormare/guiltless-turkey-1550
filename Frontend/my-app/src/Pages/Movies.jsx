@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import Carousel from 'react-elastic-carousel';
 
-//import data from "../db"
 import Carousel1 from 'better-react-carousel'
 import { useDispatch, useSelector } from 'react-redux';
 import { MOVIES_SUCC } from '../Redux/ProductReducer/actionTypes';
@@ -33,7 +32,6 @@ const Movies = () => {
     }).then((data) => {
       dispatch({type:MOVIES_SUCC,payload:data.movie})
       setdata(data.movie)
-      // console.log(data)
     }).catch((err) => {
       console.log(err)
     })
@@ -54,8 +52,6 @@ const Movies = () => {
     }).then((res) => {
       return res.json()
     }).then((data) => {
-     // dispatch({type:CART_SUCC})
-      //setdata(data.cart)
       console.log(data)
       console.log("added cart")
       alert("Product Added To The Cart")
@@ -63,7 +59,7 @@ const Movies = () => {
       console.log(err)
     })
   }
-  // console.log(data)
+  console.log(data)
   return (
     <Div>
       {/* <h1>Movies</h1> */}
